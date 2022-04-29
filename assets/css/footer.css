@@ -1,0 +1,21 @@
+footer {
+    border-top: 1px solid #CCCCCC;
+    background-color: #EFEFEF;
+    display: flex;
+    justify-content: space-around;
+    color: #999999;
+    padding: 23px 0px;
+ }
+
+footer img {
+    filter:  opacity(0.4);
+    margin-right: 15px;
+}  
+
+footer div p {
+    font-size: 12px;
+}
+
+.container-stores {
+   display: flex;     
+}
