@@ -14,8 +14,8 @@
         <section class="card">
             <form class="formulario" action="/" method="GET">
                 <h1>¡Hola!</h1>
-                <input class="usuario" type="text" placeholder="Tu nombre de usuario">
-                <input class="password" type="password" placeholder="Tu contraseña">
+                <input class="usuario" type="text" placeholder="Tu nombre de usuario" name="user">
+                <input class="password" type="password" placeholder="Tu contraseña" name="password">
                 <button type="submit">Iniciar Sesion</button>
             </form>
         </section>
@@ -23,27 +23,6 @@
             <p>¿No tienes cuenta? <a href="/register">Registrate</a></p>
         </section>
     </main>
-
-
-
-<!-- <footer>
-
-    <div>
-        <img src="/img/twitter.svg" alt="" class="redes">
-        <img src="/img/facebook.svg" alt="" class="redes">
-        <img src="/img/instagram.svg" alt="" class="redes">
-        <img src="/img/youtube.svg" alt="" class="redes">
-    </div>
-
-    <div>
-    </div>
-
-    <div>
-    </div>
-
-
-</footer> -->
-
     <%- include("../partials/footer.ejs") %>
 </body>
 
