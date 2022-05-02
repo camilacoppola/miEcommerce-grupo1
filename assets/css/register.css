@@ -1,35 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@import url('variables.css');
+@import url('footer.css');
+@import url('headerConSearch.css');
+
 *{
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
     border: none;
-    font-family: "Open Sans";
-    font-style: normal;
-    font-weight: normal;
+    font-family: 'Open Sans', sans-serif;
 }
 
 input:focus{
     border: none;
 }
 
-h1, h2, h3, h4, h5, h6{
-    font-weight: 400;
-    font-size: 2.3rem;
-}
-
-:root{
-    --colorGris:#EFEFEF;
-    --colorGrisOscuro: rgba(73, 79, 81, 1);
-    --colorVerde: rgba(12, 176, 147, 1);
-    --colorBlanco: rgba(255, 255, 255, 1);
-    --colorNegro: rgba(0, 0, 0, 1);
-    --colorRojo: rgba(255, 0, 0, 1);
-}
-
 body{
     background-image: linear-gradient(to bottom, var(--colorVerde) 50%, var(--colorGris) 50%);
     background-repeat: no-repeat;
-    min-height: 90vh;
+    min-height: 100vh;
 }
 
 .card{

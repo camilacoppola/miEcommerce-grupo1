@@ -1,4 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@import url('login.css');
+@import url('footer.css');
+@import url('headerSinSearch.css');
+@import url('variables.css');
 
 * {
     box-sizing: border-box;
@@ -9,7 +13,8 @@
 
 
 body {
-    background: linear-gradient(to bottom, rgba(12, 176, 147, 1) 35%, #EFEFEF 35%);
+    background: linear-gradient(to bottom, rgba(12, 176, 147, 1) 50%, #EFEFEF 50%);
+    background-repeat: no-repeat;
     height: 100vh;
 }
 
