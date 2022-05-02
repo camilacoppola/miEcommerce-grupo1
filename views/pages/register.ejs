@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/headerSinSearch.css">
+    <link rel="stylesheet" href="/css/register.css">
+    <title>Document</title>
+</head>
+<body>
+    <%- include('../partials/header_sin_search') %> 
+        <section class="card" id="cardRegister">
+            <h1 id="tituloRegistro">¡Registrate!</h1>
+            <form action="/register" method="POST" id="formRegistro">
+                <label for="inputEmail"></label>
+                <input class="input" type="email" name="email" id="inputEmail" placeholder="Tu email">
+                <label for="inputPW1"></label>
+                <input class="input" type="password" name="password1" id="inputPW1" placeholder="Tu nueva contraseña">
+                <label for="inputPW2"></label>
+                <input class="input" type="password" name="password2" id="inputPW2" placeholder="Repeti tu contraseña">
+                <button class="button" type="submit">Crear Cuenta</button>
+            </form>
+        </section>
+        <section id="seccionCuenta">
+            <p>¿Ya tienes cuenta? <a href="/login">Inicia sesión</a></p>
+        </section>
+
+    <%- include('../partials/footer')  %>
+</body>
+</html>
