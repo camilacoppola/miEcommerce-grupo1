@@ -1,6 +1,7 @@
 const express = require('express');
 const app = express();
 const path = require('path');
+const { emitWarning } = require('process');
 const PORT = process.env.PORT || 8080;
 
 app.set('views', './views/pages');
@@ -36,11 +37,17 @@ app.get('/checkout', (req, res) => {
 
 /* Ruta al register */
 app.get('/register', (req, res) => {
-    res.render('register');
+        res.render('register');
 });
 
-
+/* Server ON */
 app.listen(PORT, () =>{
     console.log('Servidor Levantado');
 })
 
+/* Procesamiento */
+
+/* Ruta al register */
+app.post('/register', (req, res) => {
+    res.render('register');
+});

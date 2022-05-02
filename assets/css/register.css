@@ -1,0 +1,119 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    border: none;
+    font-family: "Open Sans";
+    font-style: normal;
+    font-weight: normal;
+}
+
+input:focus{
+    border: none;
+}
+
+h1, h2, h3, h4, h5, h6{
+    font-weight: 400;
+    font-size: 2.3rem;
+}
+
+:root{
+    --colorGris:#EFEFEF;
+    --colorGrisOscuro: rgba(73, 79, 81, 1);
+    --colorVerde: rgba(12, 176, 147, 1);
+    --colorBlanco: rgba(255, 255, 255, 1);
+    --colorNegro: rgba(0, 0, 0, 1);
+    --colorRojo: rgba(255, 0, 0, 1);
+}
+
+body{
+    background-image: linear-gradient(to bottom, var(--colorVerde) 50%, var(--colorGris) 50%);
+    background-repeat: no-repeat;
+    min-height: 90vh;
+}
+
+.card{
+    background: var(--colorBlanco);
+    border-radius: 16px;
+    padding: 8px;
+    color:  var(--colorNegro);
+}
+
+#cardRegister{
+    padding: 3rem 2rem;
+    width: 100%;
+    margin: 3rem auto auto;
+    display: inline-block;
+    display: flex;
+    flex-direction: column;
+}
+
+#formRegistro{
+    display: flex;
+    flex-direction: column;
+   
+}
+
+#formRegistro .input{
+    margin-bottom: 1rem;
+}
+
+#formRegistro{
+    margin-top: 2rem;
+}
+
+.button{
+    border: none;
+    width: auto;
+    height: 32px;
+    background: rgba(73, 79, 81, 1);
+    border-radius: 16px;
+    padding: 8px 16px;
+    font-size : 12px;
+    color:  rgba(255, 255, 255, 1);
+}
+
+.button:hover{
+    background: var(--colorVerde);
+}
+
+.input {
+    width: auto;
+    height: 32px;
+    border-radius: 16px;
+    border: solid var(--colorGrisOscuro) 1px;
+    padding: 8px 16px;
+    color: var(--colorNegro);
+    background: rgba(255, 255, 255, 1);
+}
+
+.input:focus{
+    outline: none;
+    border: solid var(--colorVerde) 1px;
+}
+
+.centrarTexto{
+    text-align: center;
+}
+
+#seccionCuenta{
+    margin-top: 1rem;
+    text-align: center;
+}
+
+#tituloRegistro{
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 44px;
+}
+
+/* Tamaño PC */
+@media screen and (min-width: 720px){
+    #cardRegister{
+        width: 25%;
+        max-width: 300px;
+    }
+    
+}
