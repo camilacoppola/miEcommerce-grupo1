@@ -1,0 +1,9 @@
+/*Estilos header sin search*/
+
+.header{
+    min-height: 10vh;
+    padding: 1rem;
+    width: 100%;
+    background-color: var(--colorGris);
+    border-bottom: var(--colorGrisOscuro) solid 1px;
+}
