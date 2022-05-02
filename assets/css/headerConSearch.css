@@ -1,7 +1,7 @@
 /*Estilos header con search*/
 
 .header{
-    min-height: 10vh;
+    height: 10vh;
     padding: 1rem;
     width: 100%;
     background-color: var(--colorGris);
