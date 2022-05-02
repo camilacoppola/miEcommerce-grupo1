@@ -1,0 +1,79 @@
+/*Estilos header con search*/
+
+.header{
+    height: 10vh;
+    padding: 1rem;
+    width: 100%;
+    background-color: var(--colorGris);
+    border-bottom: var(--colorGrisOscuro) solid 1px;
+}
+
+#lupaSearchBar{
+    position: absolute;
+    right: 1rem;
+    background-color: var(--colorBlanco);
+}
+
+#lupaSearchBar img{
+    width: 16px;
+    height: auto;
+    color: var(--colorGris);
+}
+
+#formSearchBar{
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-grow: 3;
+}
+
+#header_con_search > *:not(:last-child){
+    margin-right: 3.5rem;
+}
+
+#header_con_search{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#header_con_search input{
+    width: 100%;
+}
+
+#botonCarritoCompras, #botonImagenPerfil{
+    background-color: var(--colorGrisOscuro);
+    padding: 0.4rem;
+    border-radius: 20px;
+}
+
+#contenedorBotonesHeader{
+    display: flex;
+    align-items: center;
+}
+
+#botonImagenPerfil{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 0.5rem;
+    height: 32px;
+    padding-right: 1.3em;
+}
+
+#nombreUsuario{
+    color: var(--colorBlanco);
+    margin-left: 0.5em;
+}
+
+#fotoCarrito{
+    width: 16px;
+    height: 16px;
+}
+
+#botonCarritoCompras{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px;
+}
