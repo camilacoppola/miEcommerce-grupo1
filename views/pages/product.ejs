@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/product.css" />
+    <title>Producto</title>
+  </head>
+  <body>
+    <%- include("../partials/header_con_search") %>
+    <main>
+      <section class="navegacion">
+        <div>
+          <p>
+            <a href="/"><img src="img/arrow-left.svg" alt="Icono flecha" /></a>
+            Volver al listado
+            <img src="img/flecha.svg" alt="flecha categorias" />
+            Alimentos
+          </p>
+        </div>
+      </section>
+      <section class="articleCard">
+        <div class="imagenesChicas">
+          <button>
+            <img
+              src="img/D_NQ_NP_717087-MLA41598235072_042020-O.webp"
+              alt="imagen jack daniels"
+            />
+          </button>
+          <button>
+            <img src="img/images (2).jpeg" alt="imagen jack daniels" />
+          </button>
+          <button>
+            <img
+              src="img/D_NQ_NP_705560-MLA44741701921_012021-O.webp"
+              alt="imagen jack daniels"
+            />
+          </button>
+        </div>
+        <figure class="imagenPrincipal">
+          <img
+            src="img/images (2).jpeg"
+            alt="imagen principal grande de jack daniels"
+          />
+        </figure>
+        <aside class="descripcion">
+          <h3>Whiskey Jack Daniels Honey 750ml</h3>
+          <h2>19.900 <span>puntos</span></h2>
+          <button>Agregar al carrito</button>
+          <p>
+            Un verdaderamente fabuloso licor de whisky Jack Daniels. Está hecho
+            con una mezcla de ricas especias y suave, miel tersa y el resultado
+            es delicioso sobre hielo o café.
+          </p>
+          <p>
+            Aroma de caramelo y roble carbonizado, un poco de flor de naranja,
+            miel de manuka y vainilla.
+          </p>
+          <p>
+            Boca grueso y cremoso, con notas de vainilla, roble tostado, miel de
+            nuevo, un poco de albaricoque también.
+          </p>
+          <p>De buena longitud - redondeado y rico.</p>
+          <p>No incluye vasos, la foto es sólo ilustrativa.</p>
+        </aside>
+      </section>
+      <section class="tarjetaProductos">
+        <div>
+          <h2>También te puede interesar</h2>
+        </div>
+        <div class="productosCards">
+          <article class="cardProducto">
+            <img src="img/images (1).jpeg" alt="Imagen coca-cola" />
+            <div>
+              <h3>Coca Cola Lata 220mL Pack Original x8</h3>
+              <div>
+                <p>760</p>
+                <span>Puntos</span>
+              </div>
+            </div>
+          </article>
+          <article class="cardProducto">
+            <img src="img/Rectangle 2.svg" alt="Cuadrado" />
+            <div>
+              <h3>NOMBRE DEL PRODUCTO O SERVICIO</h3>
+              <div>
+                <p>XX.XXX</p>
+                <span>Puntos</span>
+              </div>
+            </div>
+          </article>
+          <article class="cardProducto">
+            <img src="img/Rectangle 2.svg" alt="Cuadrado" />
+            <div>
+              <h3>NOMBRE DEL PRODUCTO O SERVICIO</h3>
+              <div>
+                <p>XX.XXX</p>
+                <span>Puntos</span>
+              </div>
+            </div>
+          </article>
+          <article class="cardProducto">
+            <img src="img/Rectangle 2.svg" alt="Cuadrado" />
+            <div>
+              <h3>NOMBRE DEL PRODUCTO O SERVICIO</h3>
+              <div>
+                <p>XX.XXX</p>
+                <span>Puntos</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+      <%- include("../partials/barra_navegacion.ejs") %>
+    </main>
+    <!-- <%- include("../partials/footer.ejs") %> -->
+  </body>
+</html>
