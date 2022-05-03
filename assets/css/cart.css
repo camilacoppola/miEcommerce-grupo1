@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@import url('footer.css');
+@import url('headerConSearch.css');
+@import url('variables.css');
+@import url('inputs.css');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body{
+    background-color: var(--colorGris);
+}
+
+main{
+    min-height: 90vh;
+    max-width: 1024px;
+    margin: auto;
+}
+
+.title{
+    font-family: Open Sans;
+    font-size: 1.5rem;
+    font-weight: 400;
+    line-height: 33px;
+    letter-spacing: 0em;
+    margin-top: 1.5rem;
+    margin-bottom: 1em;
+ }
+
+ #outputTotal{
+    font-weight: bolder;
+    margin-left: 1.5rem;
+ }
+
+#nombreArticulo{
+    font-size: 16px;
+}
+
+.totalPuntos, .precioProducto{
+    font-size: 24px;
+    font-weight: 700;
+    font-weight: bold;
+}
+
+.articuloElemento{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--colorBlanco);
+    border-radius: 1rem;
+    padding: 0.5rem 1rem;
+    box-shadow: 0px 4px 4px 0px #00000040;
+}
+
+#containterProductos:not(:last-child){
+    margin-bottom: 1rem;
+}
+
+.parteNombreFoto{
+    display: flex;
+    align-items: center;
+}
+
+.parteBotonesPrecio h3{
+    margin-left: 1rem;
+}
+
+.parteBotonesPrecio{
+    display: flex;
+    align-items: center;
+    min-width: 30%;
+    justify-content: space-between;
+}
+
+.buttonCantidad{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 3rem;
+    border: solid black 1px;
+    width: 100px;
+    padding: 0.5rem;
+    max-height: 2rem;
+}
+
+.buttonDisminuir, .buttonAumentar{
+    aspect-ratio: 1 / 1;
+    min-width: 16px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    background-color: transparent;
+    justify-content: center;
+    align-items: center;
+}
+
+.buttonDisminuir:hover, .buttonAumentar:hover{
+    background-color: var(--colorGris);
+}
+
+.button{
+    border: none;
+    width: auto;
+    height: 32px;
+    background: rgba(73, 79, 81, 1);
+    border-radius: 16px;
+    padding: 8px 16px;
+    font-size: 12px;
+    color:  rgba(255, 255, 255, 1);
+}
+
+.button:hover{
+    background: var(--colorVerde);
+}
+
+#totalPuntos{
+    text-align: end;
+}
+
+#buttonPagar{
+    text-decoration: none;
+    float: right;
+    margin-bottom: 2rem;
+}
+
+.imagenArticulo{
+    max-width: 128px;
+    aspect-ratio: 1 / 1;
+    object-fit: contain;
+    object-position: center;
+    margin-right: 1rem;
+    border-radius: 1rem;
+}
+
+#linkVolverAtras{
+    margin-top: 1.5rem;
+    font-size: 16px;
+    text-decoration: none;
+    font-weight: 600;
+    color: var(--colorGrisOscuro);
+    display: flex;
+    align-items: center;
+}
+
+#linkVolverAtras img{
+    margin-right: 0.5rem;
+}
+
+main{
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.articuloElemento{
+    display: flex;
+    flex-direction: column;
+}
+
+.parteBotonesPrecio{
+    width: 100%;
+    justify-content: space-around;
+    padding: 1rem 0rem;
+}
+
+@media screen and (min-width: 720px) {
+    main{
+        padding-left: auto;
+        padding-right: auto;
+    }
+
+    .parteBotonesPrecio:first-child{
+        flex-basis: 5;
+    }
+    
+    .parteBotonesPrecio:last-child{
+        flex-basis: 1;
+    }
+
+    .parteBotonesPrecio{
+        justify-content: right;
+        width: 40%;
+    }
+    
+    .parteBotonesPrecio > *{
+        margin-right: 1rem;
+    }
+    
+    .articuloElemento{
+        flex-direction: row;
+    }
+}

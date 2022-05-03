@@ -15,10 +15,13 @@ input:focus{
     border: none;
 }
 
+main{
+    min-height: 80vh;
+}
+
 body{
     background-image: linear-gradient(to bottom, var(--colorVerde) 50%, var(--colorGris) 50%);
     background-repeat: no-repeat;
-    min-height: 100vh;
 }
 
 .card{
