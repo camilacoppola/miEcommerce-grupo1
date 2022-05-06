@@ -1,5 +1,5 @@
 const loginValidacion = (req,res) => {
-
+res.redirect("/");
 }
 
 const registerValidacion = (req,res) => {
