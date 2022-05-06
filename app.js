@@ -56,6 +56,5 @@ app.listen(PORT, () =>{
 //     res.render('register');
 // });
 
-
 // Middleware
 app.use(error404MW);
