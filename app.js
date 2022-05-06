@@ -1,7 +1,6 @@
 const express = require('express');
 const app = express();
 const path = require('path');
-const { emitWarning } = require('process');
 const PORT = process.env.PORT || 8080;
 
 app.set('views', './views/pages');
@@ -11,34 +10,37 @@ app.use(express.json());
 app.use(express.urlencoded({extended:true}));
 
 /* Ruta al index */
-app.get('/', (req, res) => {
+/*app.get('/', (req, res) => {
     res.render('index');
-});
+});*/
+
+app.use('/users', require('./routes/userRoutes'))
+app.use('/', require('./routes/mainRoutes'))
 
 /* Ruta al login */
-app.get('/login', (req, res) => {
-    res.render('login');
-});
+// app.get('/login', (req, res) => {
+//     res.render('login');
+// });
 
-/* Ruta al product */
-app.get('/products', (req, res) => {
-    res.render('product');
-});
+// /* Ruta al product */
+// app.get('/products', (req, res) => {
+//     res.render('product');
+// });
 
-/* Ruta al cart */
-app.get('/cart', (req, res) => {
-    res.render('cart');
-});
+// /* Ruta al cart */
+// app.get('/cart', (req, res) => {
+//     res.render('cart');
+// });
 
-/* Ruta al checkout */
-app.get('/checkout', (req, res) => {
-    res.render('checkout');
-});
+// /* Ruta al checkout */
+// app.get('/checkout', (req, res) => {
+//     res.render('checkout');
+// });
 
-/* Ruta al register */
-app.get('/register', (req, res) => {
-        res.render('register');
-});
+// /* Ruta al register */
+// app.get('/register', (req, res) => {
+//         res.render('register');
+// });
 
 /* Server ON */
 app.listen(PORT, () =>{
@@ -48,6 +50,6 @@ app.listen(PORT, () =>{
 /* Procesamiento */
 
 /* Ruta al register */
-app.post('/register', (req, res) => {
-    res.render('register');
-});
+// app.post('/register', (req, res) => {
+//     res.render('register');
+// });
