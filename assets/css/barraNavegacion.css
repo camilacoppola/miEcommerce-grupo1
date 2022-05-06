@@ -1,0 +1,55 @@
+@import url('variables.css');
+
+.navInferior{
+     background-color: #333333;
+     border-radius: 16px;
+     width: 1024px;
+     margin-top: 48px;
+}
+.navInferior > ul{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+    padding: 0.5rem 0px;
+ }
+ .navInferior .botonera{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-right: solid 2px white;
+    text-align: center;
+    width: calc(100% / 8);
+    aspect-ratio: 1 / 1;
+    max-width: 128px;
+ }
+
+ .botonera .container-icon{
+     max-height: 32px;
+     aspect-ratio: 1/1;
+     margin-bottom: 0.5rem;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+ }
+ .navInferior ul :nth-child(5) .container-icon img{
+    max-height: 18px;
+ }
+
+ .navInferior ul :nth-child(5) .container-icon{
+    padding: 7px 0;
+ }
+
+ #sinBorde{
+    border-right: none;
+ }
+
+ .navInferior .botonera p{
+    color: var(--colorBlanco);
+ }
+
+ .botonera > a > img{
+    border-radius: 0.5rem;
+ }
+

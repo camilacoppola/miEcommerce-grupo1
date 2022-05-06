@@ -4,15 +4,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/headerSinSearch.css">
     <link rel="stylesheet" href="/css/register.css">
     <title>Document</title>
 </head>
 <body>
     <%- include('../partials/header_sin_search') %> 
+    <main>
         <section class="card" id="cardRegister">
             <h1 id="tituloRegistro">¡Registrate!</h1>
-            <form action="/register" method="POST" id="formRegistro">
+            <form action="/users/register" method="POST" id="formRegistro">
                 <label for="inputEmail"></label>
                 <input class="input" type="email" name="email" id="inputEmail" placeholder="Tu email">
                 <label for="inputPW1"></label>
@@ -23,9 +23,9 @@
             </form>
         </section>
         <section id="seccionCuenta">
-            <p>¿Ya tienes cuenta? <a href="/login">Inicia sesión</a></p>
+            <p>¿Ya tienes cuenta? <a href="/users/login">Inicia sesión</a></p>
         </section>
-
+    </main>
     <%- include('../partials/footer')  %>
 </body>
 </html>

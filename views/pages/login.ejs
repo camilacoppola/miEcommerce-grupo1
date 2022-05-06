@@ -5,14 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
-    <link rel="stylesheet" href="./css/styles.css">
-    <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="/css/login.css">
 </head>
 <body>
-    <%- include("../partials/header_sin_search.ejs") %>
+    <%- include("../partials/header_sin_search") %>
     <main class="contenedor-flex">
         <section class="card">
-            <form class="formulario" action="/" method="GET">
+            <form class="formulario" action="/users/login" method="POST">
                 <h1>¡Hola!</h1>
                 <input class="usuario" type="text" placeholder="Tu nombre de usuario" name="user">
                 <input class="password" type="password" placeholder="Tu contraseña" name="password">
@@ -20,7 +19,7 @@
             </form>
         </section>
         <section class="contenedor-registrarse">
-            <p>¿No tienes cuenta? <a href="/register">Registrate</a></p>
+            <p>¿No tienes cuenta? <a href="/users/register">Registrate</a></p>
         </section>
     </main>
     <%- include("../partials/footer.ejs") %>
