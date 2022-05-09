@@ -13,11 +13,11 @@ const loginRender = (req,res) => {
 const registerRender = (req,res) => {
     res.render("register", {errors:[]});
 }
+
 const registerValidacion = (req,res) => {
     const errors = validationResult(req)
     if(!errors.isEmpty()){
-        console.log(errors.mapped());
-        return res.render("register",{errors:errors.mapped()}) //error indicando el porque,
+        return res.render("register",{errors:errors.mapped()}) //error indicando el porque
     }
     let usuarios = JSON.parse(fs.readFileSync(path.join(__dirname,'../models/db/users.json')))
     usuarios.push(req.body)

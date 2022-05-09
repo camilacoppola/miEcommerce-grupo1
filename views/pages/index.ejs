@@ -61,100 +61,19 @@
         <h2 class="titulo_seccion"> Los más pedidos</h2>
         <div class="container_lista_productos">
 
-            <article class="cardProducto">
-                <img src="img/images (1).jpeg" alt="">
-                <div>
-                    <h3>Coca Cola Lata 200 mL Pack Original x8</h3>
+            <% mostWantedProducts.forEach(element => { %>
+                <article class="cardProducto">
+                    <img src=<%= element.image %> alt=<%=element.title%>>
                     <div>
-                        <p>760</p>
-                        <span>Puntos</span>
+                        <a href=<%= `/product/${element._id}` %>> <h3 class ="Descripcion"><%= element.title %></h3></a>
+                        <div>
+                            <p><%= element.price %></p>
+                            <span>Puntos</span>
+                        </div>
                     </div>
-                </div>
-            </article>
-
-
-            <article class="cardProducto">
-                <img src="/img/imagenDefaultProducto.png" alt="">
-                <div>
-                    <h3>NOMBRE DEL PRODUCTO O SERVICIO</h3>
-                    <div>
-                        <p>XX.XXX</p>
-                        <span>Puntos</span>
-                    </div>
-                </div>
-            </article>
-
-
-            <article class="cardProducto">
-                <img src="/img/imagenDefaultProducto.png" alt="">
-                <div>
-                    <h3>NOMBRE DEL PRODUCTO O SERVICIO</h3>
-                    <div>
-                        <p>XX.XXX</p>
-                        <span>Puntos</span>
-                    </div>
-                </div>
-            </article>
-
-
-            <article class="cardProducto">
-                <img src="/img/imagenDefaultProducto.png" alt="">
-                <div>
-                    <h3>NOMBRE DEL PRODUCTO O SERVICIO</h3>
-                    <div>
-                        <p>XX.XXX</p>
-                        <span>Puntos</span>
-                    </div>
-                </div>
-            </article>
-
-
-            <article class="cardProducto">
-                <img src="/img/imagenDefaultProducto.png" alt="">
-                <div>
-                    <h3>NOMBRE DEL PRODUCTO O SERVICIO</h3>
-                    <div>
-                        <p>XX.XXX</p>
-                        <span>Puntos</span>
-                    </div>
-                </div>
-            </article>
-
-
-            <article class="cardProducto">
-                <img src="/img/imagenDefaultProducto.png" alt="">
-                <div>
-                    <h3>NOMBRE DEL PRODUCTO O SERVICIO</h3>
-                    <div>
-                        <p>XX.XXX</p>
-                        <span>Puntos</span>
-                    </div>
-                </div>
-            </article>
-
-
-            <article class="cardProducto">
-                <img src="/img/imagenDefaultProducto.png" alt="">
-                <div>
-                    <h3>NOMBRE DEL PRODUCTO O SERVICIO</h3>
-                    <div>
-                        <p>XX.XXX</p>
-                        <span>Puntos</span>
-                    </div>
-                </div>
-            </article>
-
-
-            <article class="cardProducto">
-                <img src="/img/imagenDefaultProducto.png" alt="">
-                <div>
-                    <h3>NOMBRE DEL PRODUCTO O SERVICIO</h3>
-                    <div>
-                        <p>XX.XXX</p>
-                        <span>Puntos</span>
-                    </div>
-                </div>
-            </article>
+                </article>
+            <% }) %>
+            
         </div>
     </section>
 

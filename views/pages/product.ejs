@@ -43,16 +43,16 @@
         <div class="productosCards">
           <% suggestedProducts.forEach(element => { %>
             <article class="cardProducto">
-              <img src=<%= element.image %> alt=<%= element.title %>>
-              <div>
-                  <h3><%= element.title %></h3>
-                  <div>
-                      <p><%= element.price %></p>
-                      <span>Puntos</span>
-                  </div>
-              </div>
-          </article>
-          <% }) %>
+                <img src=<%= element.image %> alt=<%=element.title%>>
+                <div>
+                    <a href=<%= `/product/${element._id}` %>> <h3 class ="Descripcion"><%= element.title %></h3></a>
+                    <div>
+                        <p><%= element.price %></p>
+                        <span>Puntos</span>
+                    </div>
+                </div>
+            </article>
+        <% }) %>
         </div>
       </section>
       <%- include("../partials/barra_navegacion.ejs") %>
