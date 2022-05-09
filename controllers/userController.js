@@ -3,11 +3,16 @@ const {validationResult} = require ('express-validator');
 const path = require ('path');
 
 const loginValidacion = (req,res) => {
-res.redirect("/");
+    const errors = validationResult(req)
+    if(!errors.isEmpty()){
+        console.log(errors.mapped());
+        return res.render("login",{errors:errors.mapped()}) //error indicando el porque,
+    }
+    res.redirect("/");
 }
 
 const loginRender = (req,res) => {
-    res.render("login")
+    res.render("login", {errors:[]})
 }
 
 const registerRender = (req,res) => {
