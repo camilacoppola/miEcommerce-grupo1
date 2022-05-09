@@ -1,0 +1,33 @@
+@import url('variables.css');
+
+.errorVal{
+    font-size: 0.8rem;
+    padding: 0.5rem;
+    background-color: orange;
+    border-radius: 8px;
+    color: azure;
+    margin-bottom: 1rem;
+    animation: desaparecer 1s linear 3s 1 forwards normal;
+}
+
+.errorVal::before{
+    content: "⚠";
+    margin-right: 0.3rem;
+}
+
+@keyframes desaparecer {
+    0%{
+        height: 0;
+        width: 0;
+        padding: 0;
+        margin: 0;
+        visibility: hidden;
+    }
+    100%{
+        height: 0;
+        width: 0;
+        padding: 0;
+        margin: 0;
+        visibility: hidden;
+    }
+}

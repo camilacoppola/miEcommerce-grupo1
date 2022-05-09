@@ -3,9 +3,10 @@ const path = require ('path');
 const fs = require ('fs');
 
 
-const validarUser = [ 
+const validarUser = [
     body('email')
-        .notEmpty() .withMessage('El email es requerido.') 
+        .trim()
+        .notEmpty() .withMessage('El email es requerido.')
         .custom((value) =>{
             let usuarios = fs.readFileSync(path.join(__dirname, "../models/db/users.json"));
             usuarios = JSON.parse(usuarios);
@@ -29,17 +30,15 @@ const validarUser = [
         }),
 ];
 
-const validarUserLogin = [ 
+const validarUserLogin = [
     body('user')
-        .notEmpty() .withMessage('El email es requerido.').trim().withMessage("No puede tener espacios")
-    
-
+        .trim()
+        .notEmpty() .withMessage('El email es requerido.')
         .custom((value, {req}) =>{
             let userMail = fs.readFileSync(path.join(__dirname, "../models/db/users.json"));
             userMail = JSON.parse(userMail);
             let usersMails = userMail.find(usersMails => usersMails.email === value);
             if(!usersMails){
-                
                 throw new Error('Usuario incorrecto');
             }
             req.usuario = usersMails
