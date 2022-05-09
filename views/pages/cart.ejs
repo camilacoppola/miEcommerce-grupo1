@@ -12,47 +12,38 @@
     <main>
         <a href="" id="linkVolverAtras"><img src="/img/arrow-left.svg" alt="">Volver</a>
         <h1 class="title">Productos en tu Carrito</h1>
-        <section id="containterProductos">
-            <article class ="articuloElemento">
-                <div class="parteNombreFoto">
-                    <img class="imagenArticulo" src="/img/D_NQ_NP_704045-MLA44850206709_022021-O.webp" alt="">
-                    <h3 class="nombreArticulo">Jack Daniel's Tennessee Honey Botella 750 mL</h3>
-                </div>
-                <div class="parteBotonesPrecio">
-                    <button class="button">Quitar</button>
-                    <div class="buttonCantidad"><button class="buttonDisminuir">-</button> 0 <button class="buttonAumentar">+</button></div>
-                    <span class="precioProducto">19.900</span>
-                </div>
-            </article>
-        </section>
-        <section id="containterProductos">
-            <article class ="articuloElemento">
-                <div class="parteNombreFoto">
-                    <img class="imagenArticulo" src="/img/combohamburguesa.jpg" alt="">
-                    <h3 class="nombreArticulo">1 Combo Hamburguesa</h3>
-                </div>
-                <div class="parteBotonesPrecio">
-                    <button class="button">Quitar</button>
-                    <div class="buttonCantidad"><button class="buttonDisminuir">-</button> 0 <button class="buttonAumentar">+</button></div>
-                    <span class="precioProducto">5.000</span>
-                </div>
-            </article>
-        </section>
-        <section id="containterProductos">
-            <article class ="articuloElemento">
-                <div class="parteNombreFoto">
-                    <img class="imagenArticulo" src="/img/images (1).jpeg" alt="">
-                    <h3 class="nombreArticulo">Coca Cola Lata 220mL Pack Original x8</h3>
-                </div>
-                <div class="parteBotonesPrecio">
-                    <button class="button">Quitar</button>
-                    <div class="buttonCantidad"><button class="buttonDisminuir">-</button> 0 <button class="buttonAumentar">+</button></div>
-                    <span class="precioProducto">1.520</span>
-                </div>
-            </article>
-        </section>
-        <p id="totalPuntos" class="title">Total de Puntos<output id="outputTotal"> 26.420</output></p>
-        <a href="/checkout" id="buttonPagar" class="button">Ir a pagar</a>
+        <% if(productosCarrito.length === 0) {%>
+            <section id="cardError">
+                <img src="./img/carritoIcono.png" alt="carrito icono">
+                <h2>No tienes productos en tu carrito</h2>
+                <a href="/" class="button">Volver</a>
+            </section>
+        <% }else { %>
+            <% productosCarrito.forEach(producto => { %>
+                <section id="containterProductos">
+                    <article class ="articuloElemento">
+                        <div class="parteNombreFoto">
+                            <img class="imagenArticulo" src=<%= producto.imagen %> alt="">
+                            <h3 class="nombreArticulo"><%= producto.nombre %></h3>
+                        </div>
+                        <div class="parteBotonesPrecio">
+                            <form action="/cart/quitar" method="post">
+                                <input type="hidden" name='idProducto' value=<%= producto.id %>>
+                                <input type="submit" class="button" value="Quitar">
+                            </form>
+                            
+                            <div class="buttonCantidad"><button class="buttonDisminuir">-</button> <%= producto.cantidad %> <button class="buttonAumentar">+</button></div>
+                            <span class="precioProducto"><%= producto.precio * producto.cantidad%></span>
+                        </div>
+                    </article>
+                </section>
+            <% }) %>
+            <p id="totalPuntos" class="title">Total de Puntos<output id="outputTotal"> 
+
+                <%= productosCarrito.reduce((total,producto) => total+=(producto.precio * producto.cantidad),0) %> 
+            </output></p>
+            <a href="/checkout" id="buttonPagar" class="button">Ir a pagar</a>
+        <% } %>
     </main>
     <%- include('../partials/footer')  %>
 </body>

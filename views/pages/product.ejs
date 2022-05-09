@@ -32,7 +32,10 @@
         <aside class="descripcion">
           <h3><%= producto.title%></h3>
           <h2><%= producto.price%> <span>puntos</span></h2>
-          <a href="/cart">Agregar al carrito</a>
+          <form action="/cart" method="post">
+            <input type="hidden" name='idProducto' value=<%= producto._id %>>
+            <input type="submit" class="button" value="Agregar al carrito">
+          </form>
           <p><%= producto.description%></p>
         </aside>
       </section>
