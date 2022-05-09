@@ -29,4 +29,36 @@ const validarUser = [
         }),
 ];
 
-module.exports = {validarUser};
+const validarUserLogin = [ 
+    body('user')
+        .notEmpty() .withMessage('El email es requerido.').trim().withMessage("No puede tener espacios")
+    
+
+        .custom((value, {req}) =>{
+            let userMail = fs.readFileSync(path.join(__dirname, "../models/db/users.json"));
+            userMail = JSON.parse(userMail);
+            let usersMails = userMail.find(usersMails => usersMails.email === value);
+            if(!usersMails){
+                
+                throw new Error('Usuario incorrecto');
+            }
+            req.usuario = usersMails
+
+            return true;
+        }),
+
+    body('password')
+        .notEmpty().withMessage('La contreña es requerida.')
+        .isLength({min: 8}).withMessage('La longitud minima es 8 caracteres.')
+        .custom((value, {req}) =>{
+
+            if(!req.usuario){
+                if (req.usuario.password1!==value) throw new Error('Usuario incorrecto');
+
+            }
+        
+            return true;
+        }),
+];
+
+module.exports = {validarUser, validarUserLogin};

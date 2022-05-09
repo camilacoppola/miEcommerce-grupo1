@@ -1,11 +1,12 @@
 const router = require('express').Router()
 const {loginValidacion,registerValidacion,registerRender,loginRender} = require('../controllers/userController')
-const { validarUser } = require('../middlewares/userMiddlewares')
+const { validarUser, } = require('../middlewares/userMiddlewares')
+const { validarUserLogin } = require('../middlewares/userMiddlewares')
 
 //render.
 router.get('/login', loginRender)
 //validacion de los datos ingresados.
-router.post('/login', loginValidacion)
+router.post('/login', validarUserLogin, loginValidacion)
 
 
 //render del registro.
