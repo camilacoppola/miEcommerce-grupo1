@@ -2,6 +2,7 @@ const express = require('express');
 const app = express();
 const path = require('path');
 const PORT = process.env.PORT || 8080;
+const error404MW = require('./middlewares/error404Middleware') 
 
 app.set('views', './views/pages');
 app.set('view engine', 'ejs');
@@ -14,6 +15,7 @@ app.use(express.urlencoded({extended:true}));
     res.render('index');
 });*/
 
+
 app.use('/users', require('./routes/userRoutes'))
 app.use('/', require('./routes/mainRoutes'))
 
@@ -24,7 +26,7 @@ app.use('/', require('./routes/mainRoutes'))
 
 // /* Ruta al product */
 // app.get('/products', (req, res) => {
-//     res.render('product');
+    //     res.render('product');
 // });
 
 // /* Ruta al cart */
@@ -34,15 +36,15 @@ app.use('/', require('./routes/mainRoutes'))
 
 // /* Ruta al checkout */
 // app.get('/checkout', (req, res) => {
-//     res.render('checkout');
-// });
+    //     res.render('checkout');
+    // });
 
-// /* Ruta al register */
-// app.get('/register', (req, res) => {
-//         res.render('register');
-// });
-
-/* Server ON */
+    // /* Ruta al register */
+    // app.get('/register', (req, res) => {
+        //         res.render('register');
+        // });
+        
+        /* Server ON */
 app.listen(PORT, () =>{
     console.log('Servidor Levantado');
 })
@@ -53,3 +55,6 @@ app.listen(PORT, () =>{
 // app.post('/register', (req, res) => {
 //     res.render('register');
 // });
+
+// Middleware
+app.use(error404MW);
