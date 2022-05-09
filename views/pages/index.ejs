@@ -41,51 +41,19 @@
         <h2 class="titulo_seccion"> Te puede interesar</h2>
         <div class="container_lista_productos">
 
+        <% suggestedProducts.forEach(element => { %>
             <article class="cardProducto">
-                <img src="/img/images (2).jpeg" alt="Image Jack Daniels ">
+                <img src=<%= element.image %> alt=<%=element.title%>>
                 <div>
-                    <a href="/product/2"><h3 class ="Descripcion">Whiskey Jack Daniels Honey 750ml</h3></a>
+                    <a href=<%= `/product/${element._id}` %>> <h3 class ="Descripcion"><%= element.title %></h3></a>
                     <div>
-                        <p>760</p> 
+                        <p><%= element.price %></p>
                         <span>Puntos</span>
                     </div>
                 </div>
             </article>
+        <% }) %>
 
-            <article class="cardProducto">
-                <img src="/img/imagenDefaultProducto.png" alt="">
-                <div>
-                    <h3>NOMBRE DEL PRODUCTO O SERVICIO</h3>
-                    <div>
-                        <p>XX.XXX</p>
-                        <span>Puntos</span>
-                    </div>
-                </div>
-            </article>
-
-
-            <article class="cardProducto">
-                <img src="/img/imagenDefaultProducto.png" alt="">
-                <div>
-                    <h3>NOMBRE DEL PRODUCTO O SERVICIO</h3>
-                    <div>
-                        <p>XX.XXX</p>
-                        <span>Puntos</span>
-                    </div>
-                </div>
-            </article>
-
-
-            <article class="cardProducto">
-                <img src="/img/imagenDefaultProducto.png" alt="">
-                <div>
-                    <h3>NOMBRE DEL PRODUCTO O SERVICIO</h3>
-                    <div>
-                        <p>XX.XXX</p>
-                        <span>Puntos</span>
-                    </div>
-                </div>
-            </article>
         </div>
     </section>
 

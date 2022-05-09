@@ -1,5 +1,5 @@
 const checkout = (req,res) => {
-    res.render("checkout")
+    res.send("Not implemented")
 }
 
 
