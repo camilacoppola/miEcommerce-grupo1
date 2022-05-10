@@ -46,6 +46,10 @@
     border-radius: 20px;
 }
 
+#botonCarritoCompras:hover, #botonImagenPerfil:hover{
+    background: rgb(57, 62, 63);
+}
+
 #contenedorBotonesHeader{
     display: flex;
     align-items: center;
@@ -70,6 +74,10 @@
     height: 16px;
 }
 
+#botonImagenPerfil{
+    position: relative;
+}
+
 #botonCarritoCompras{
     display: flex;
     align-items: center;
@@ -77,3 +85,24 @@
     padding: 8px;
 }
 
+#botonDesloggear{
+    display: none;
+    position: absolute;
+}
+
+#botonImagenPerfil:hover #botonDesloggear{
+    display: inline-block;
+    background-color: var(--colorGrisOscuro);
+    padding: 0.5rem 1rem;
+    top: 100%;
+    right: 0;
+    border-radius: 1rem 0 1rem 1rem;
+    color: var(--colorBlanco);
+    border-top-style: solid;
+    border-top-width: 3px;
+    border-top-color: var(--colorGris);
+}
+
+#botonImagenPerfil:hover #botonDesloggear:hover{
+    background: rgb(57, 62, 63);
+}

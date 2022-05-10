@@ -13,9 +13,14 @@
 .cardProducto img{
     width: 100%;
     aspect-ratio: 1 / 1 ;
-    object-fit: cover;
+    object-fit: contain;
     object-position: center;
     border-radius: 0.5rem;
+    transition: object-fit 2s linear 0s;
+}
+
+.cardProducto:hover img{
+    object-fit: cover;
 }
 
 .cardProducto > div{

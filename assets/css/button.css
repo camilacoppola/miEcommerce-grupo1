@@ -1,6 +1,6 @@
 @import url('variables.css');
 
-.buttonGris, .buttonVerde{
+.buttonGris, .buttonVerde, .buttonGrisAVerde{
     border: none;
     width: auto;
     height: 32px;
@@ -10,8 +10,12 @@
     color:  rgba(255, 255, 255, 1);
 }
 
+.buttonGrisAVerde{
+    background-color: var(--colorGrisOscuro);
+}
+
 .buttonGris{
-    background: rgba(73, 79, 81, 1);
+    background: var(--colorGrisOscuro);
 }
 
 .buttonVerde{
@@ -25,3 +29,13 @@
 .buttonVerde:hover{
     background: rgb(9, 138, 115);
 }
+
+.buttonGrisAVerde:hover{
+    background: var(--colorVerde);
+}
+
+.buttonGrisAVerde:hover, .buttonGris:hover, .buttonGris:hover{
+    cursor: pointer;
+}
+
+
