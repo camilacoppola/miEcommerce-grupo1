@@ -8,9 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     document.getElementById("botonDesloggear").addEventListener('click', () => {
         if(encuentra){
-            console.log(encuentra);
             localStorage.removeItem("logged");
-            console.log(localStorage.getItem("logged"));
             location.replace("/users/login");
         }
     })
