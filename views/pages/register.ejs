@@ -23,10 +23,12 @@
                 <label for="inputPW2"></label>
                 <input class="input" type="password" name="password2" id="inputPW2" placeholder="Repeti tu contraseña" autocomplete="off">
                 <% if (errors.password2 || errors.password1) { %>
-                    <% if(errors.password1.msg === errors.password2?.msg){ %>
+                    <% if(errors.password1?.msg === errors.password2?.msg){ %>
                         <span class="errorVal"> <%=errors.password2?.msg %></span>
                     <% } else{ %>
-                        <span class="errorVal"> <%=errors.password1?.msg %> </span>
+                        <% if (errors.password1) { %>
+                            <span class="errorVal"> <%=errors.password1?.msg %> </span>
+                        <% } %>
                         <span class="errorVal"> <%=errors.password2?.msg %> </span>
                 <% }} %>
                 <button class="button" type="submit">Crear Cuenta</button>
