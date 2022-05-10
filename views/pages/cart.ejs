@@ -6,11 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/cart.css">
     <title>Cart</title>
+    <script src="/scripts/fakeSession.js"></script>
 </head>
 <body>
     <%- include('../partials/header_con_search')  %>
     <main>
-        <a href="" id="linkVolverAtras"><img src="/img/arrow-left.svg" alt="">Volver</a>
+        <a href="/" id="linkVolverAtras"><img src="/img/arrow-left.svg" alt="">Volver</a>
         <h1 class="title">Productos en tu Carrito</h1>
         <% if(productosCarrito.length === 0) {%>
             <section id="cardError">
@@ -29,7 +30,7 @@
                         <div class="parteBotonesPrecio">
                             <form action="/cart/quitar" method="post">
                                 <input type="hidden" name='idProducto' value=<%= producto.id %>>
-                                <input type="submit" class="button" value="Quitar">
+                                <input type="submit" class="buttonGrisAVerde" value="Quitar">
                             </form>
                             
                             <div class="buttonCantidad"><button class="buttonDisminuir">-</button> <%= producto.cantidad %> <button class="buttonAumentar">+</button></div>
@@ -42,7 +43,7 @@
 
                 <%= productosCarrito.reduce((total,producto) => total+=(producto.precio * producto.cantidad),0) %> 
             </output></p>
-            <a href="/checkout" id="buttonPagar" class="button">Ir a pagar</a>
+            <a href="/checkout" id="buttonPagar" class="buttonGrisAVerde">Ir a pagar</a>
         <% } %>
     </main>
     <%- include('../partials/footer')  %>

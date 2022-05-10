@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@import url('footer.css');
+@import url('headerSinSearch.css');
+@import url('variables.css');
+@import url('inputs.css');
+@import url('button.css');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body{
+    background: linear-gradient(to bottom,var(--colorGris) 50%, var(--colorVerde) 50%);
+}
+
+main{
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+footer{
+    position: relative;
+    bottom: 0px;
+}
+
+#carita_triste{
+    font-size: 8rem;
+}
+
+h1{
+    font-size: 6rem;
+}
+
+p{
+    font-size: 2rem;
+    text-align: left;
+}
+
+#buttonVolver{
+    align-self: flex-end;
+    text-decoration: none;
+}
+
+#container_main{
+    display: flex;
+    flex-direction: column;
+}

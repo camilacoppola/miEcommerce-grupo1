@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/css/product.css" />
     <title>Producto</title>
+    <script src="/scripts/fakeSession.js"></script>
   </head>
   <body>
     <%- include("../partials/header_con_search") %>
@@ -34,7 +35,7 @@
           <h2><%= producto.price%> <span>puntos</span></h2>
           <form action="/cart" method="post">
             <input type="hidden" name='idProducto' value=<%= producto._id %>>
-            <input type="submit" class="button" value="Agregar al carrito">
+            <input type="submit" class="buttonGris" value="Agregar al carrito">
           </form>
           <p><%= producto.description%></p>
         </aside>
