@@ -42,7 +42,7 @@ const validarUserLogin = [
                 throw new Error('Usuario incorrecto');
             }
             req.usuario = usersMails
-
+            console.log(req.usuario.password1)
             return true;
         }),
 
@@ -50,9 +50,12 @@ const validarUserLogin = [
         .notEmpty().withMessage('La contreña es requerida.')
         .isLength({min: 8}).withMessage('La longitud minima es 8 caracteres.')
         .custom((value, {req}) =>{
-
-            if(!req.usuario){
-                if (req.usuario.password1!==value) throw new Error('Usuario incorrecto');
+            console.log(req.usuario.password1, ' ', value)
+            if(req.usuario){
+                
+                if (req.usuario?.password1!==value) {
+                    throw new Error('Usuario incorrecto');
+                }
 
             }
         

@@ -22,7 +22,7 @@
                 <input class="password" type="password" placeholder="Tu contraseña" name="password">
                 <% if (errors.password) { %>
                     <span class="errorVal">
-                        <%=errors.password.msg%>
+                        <%=errors.password?.msg%>
                     </span>
                 <% } %>
                 <button type="submit">Iniciar Sesion</button>
