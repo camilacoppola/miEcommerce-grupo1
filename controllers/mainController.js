@@ -8,9 +8,10 @@ const mainRender = async (req,res) => {
     let mostWantedProducts = await fetch('https://dhfakestore.herokuapp.com/api/products/mostwanted');
     mostWantedProducts = await mostWantedProducts.json();
 
-    res.render('index', {suggestedProducts: suggestedProducts.slice(0, 4), mostWantedProducts: mostWantedProducts.slice(0, 8)});
+    let loggeado = req.app.get('user');
+    console.log(loggeado);
+    res.render('index', {sesionLogeada: loggeado, suggestedProducts: suggestedProducts.slice(0, 4), mostWantedProducts: mostWantedProducts.slice(0, 8)});
 }
-
 
 module.exports = {
     mainRender

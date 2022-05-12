@@ -28,7 +28,7 @@ const product = async (req,res) => {
         
         res.render("product", {producto:data, suggestedProducts: suggestedProducts.slice(0, 4)});
     } catch (error) {
-        res.send(error);
+        res.render('404-page');
     }
 }
 
