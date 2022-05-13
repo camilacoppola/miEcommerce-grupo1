@@ -1,0 +1,57 @@
+@import url('variables.css');
+
+.alertError{
+    background-color: var(--colorBlanco);
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    position: fixed;
+    align-items: flex-start;
+    top: 50%;
+    left: 50%;
+    padding: 1rem;
+    transform: translate(-50%, -50%);
+    background-color: var(--colorBlanco);
+    min-width: 80vw;
+    box-shadow: 0px 0px 0.6rem 0.3rem #00000040;
+    aspect-ratio: 4 / 1;
+}
+
+.alertError h6{
+    font-size: 1rem;
+    font-weight: 900;
+}
+
+.alertError p{
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.alertError button{
+    align-self: flex-end;
+}
+
+.errorMsjButtonContainer{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.filtroNegro{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--colorBlanco);
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+@media screen and (min-width: 720px){
+    .alertError{
+        min-width: 50vw;
+    }
+}

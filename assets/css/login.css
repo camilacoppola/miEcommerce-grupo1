@@ -6,6 +6,7 @@
 @import url('erroresValidacion.css');
 @import url("card.css");
 @import url('button.css');
+@import url('alertError.css');
 
 * {
     box-sizing: border-box;
@@ -40,7 +41,7 @@
     font-size: 32px;
 }
 
-.formulario input {
+.formulario > input {
     padding: 8px;
     border: 1px solid gray;
     border-radius: 16px;
@@ -79,3 +80,14 @@
     color: var(--colorNegro); 
  }
 
+#labelCheckUser{
+    margin-left: 0.3rem;
+    font-size: 12px;;
+}
+
+#checkContainer{
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
