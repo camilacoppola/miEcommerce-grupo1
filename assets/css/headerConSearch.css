@@ -64,6 +64,8 @@
     padding-right: 1.3em;
 }
 
+
+
 #nombreUsuario{
     color: var(--colorBlanco);
     margin-left: 0.5em;
@@ -76,6 +78,7 @@
 
 #botonImagenPerfil{
     position: relative;
+    padding-left: 0.3rem;
 }
 
 #botonCarritoCompras{
@@ -86,31 +89,88 @@
 }
 
 .botonDesloggear{
+    border-radius: 16px;
+    background-color: var(--colorBlanco);
+    z-index: 1;
     position: absolute;
     top: 100%;
     right: 0;
     display: none;
-    padding: 0.5rem;
-    min-width: 200px;
+    aspect-ratio: 3 / 1;
+    margin-top: 1rem;
+    box-shadow: 0px 0px 10px 0px #00000040;
+    cursor: default;
 }
 
 .botonDesloggear > li{
-    padding: 0.5rem;
     width: 100%;
     list-style: none;
 }
 
-.botonDesloggear > li > *{
-    width: 100%;
-    margin-left: 2rem; 
+.botonDesloggear > li:first-child > *{
+    border-radius: 16px 16px 0px 0px;
+    border-bottom: 2px lightgray solid;
 }
 
-.botonDesloggear > li > img{
-    width: 1rem;
+.botonDesloggear > li:last-child > *{
+    border-radius: 0px 0px 16px 16px;
+    border-top: 2px lightgray solid;
+}
+
+.botonDesloggear > li > *{
+    padding: 0.5rem 2rem;
+    display: block;
+    color: var(--colorGrisOscuro);
+    font-weight: 600;
+    font-size: 0.8rem;
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+.botonDesloggear > li > button{
+    color: var(--colorGrisOscuro);
+    background-color: none;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.botonDesloggear > li > div > img{
+    width: 2rem;
     aspect-ratio: 1 / 1;
+    margin-right: 0.5rem;
+}
+
+.botonDesloggear > li > div{
+    display: flex;
+    align-items: center;
+    padding-left: 1rem;
+    padding-right: 1rem;
 }
 
 .botonDesloggearVisible{
     display: flex;
     flex-direction: column;
+}
+
+@media screen and (max-width: 720px) {
+    .botonDesloggear{
+        position: fixed;
+        top: 0;
+        right: 0;
+        max-width: 50vh;
+        height: 100vh;
+        margin-top: 0;
+        border-radius: 16px 0px 16px 16px;
+    }
+    
+    .botonDesloggear > li:first-child > *{
+        border-radius: 16px 0px 0px 0px;
+        border-bottom: 2px lightgray solid;
+    }
+
+    .botonDesloggear > li:last-child > *{
+        border-radius: 0px;
+        border-top: 2px lightgray solid;
+        width: 100%;
+        text-align: start;
+    }
 }
