@@ -3,7 +3,7 @@
     min-height: 10vh;
     padding: 1rem;
     width: 100%;
-    background-color: var(--colorGris);
+    background-color: var(--colorBlanco);
     border-bottom: var(--colorGrisOscuro) solid 1px;
 }
 
@@ -40,13 +40,13 @@
     width: 100%;
 }
 
-#botonCarritoCompras, #botonImagenPerfil{
+#botonCarritoCompras{
     background-color: var(--colorGrisOscuro);
     padding: 0.4rem;
     border-radius: 20px;
 }
 
-#botonCarritoCompras:hover, #botonImagenPerfil:hover{
+#botonCarritoCompras:hover{
     background: rgb(57, 62, 63);
 }
 
@@ -85,24 +85,32 @@
     padding: 8px;
 }
 
-#botonDesloggear{
-    display: none;
+.botonDesloggear{
     position: absolute;
-}
-
-#botonImagenPerfil:hover #botonDesloggear{
-    display: inline-block;
-    background-color: var(--colorGrisOscuro);
-    padding: 0.5rem 1rem;
     top: 100%;
     right: 0;
-    border-radius: 1rem 0 1rem 1rem;
-    color: var(--colorBlanco);
-    border-top-style: solid;
-    border-top-width: 3px;
-    border-top-color: var(--colorGris);
+    display: none;
+    padding: 0.5rem;
+    min-width: 200px;
 }
 
-#botonImagenPerfil:hover #botonDesloggear:hover{
-    background: rgb(57, 62, 63);
+.botonDesloggear > li{
+    padding: 0.5rem;
+    width: 100%;
+    list-style: none;
+}
+
+.botonDesloggear > li > *{
+    width: 100%;
+    margin-left: 2rem; 
+}
+
+.botonDesloggear > li > img{
+    width: 1rem;
+    aspect-ratio: 1 / 1;
+}
+
+.botonDesloggearVisible{
+    display: flex;
+    flex-direction: column;
 }
