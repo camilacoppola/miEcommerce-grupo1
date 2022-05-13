@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/index.css">
     <title>Home</title>
+    <% if (sesionLogeada) { %>
+        <script> localStorage.setItem("logged", true); </script>
+    <% } %>
+    <script src="/scripts/fakeSession.js"></script>
 </head>
 <body>
     <%- include('../partials/header_con_search') %>
@@ -41,51 +45,19 @@
         <h2 class="titulo_seccion"> Te puede interesar</h2>
         <div class="container_lista_productos">
 
+        <% suggestedProducts.forEach(element => { %>
             <article class="cardProducto">
-                <img src="/img/images (2).jpeg" alt="Image Jack Daniels ">
+                <img src=<%= element.image %> alt=<%=element.title%>>
                 <div>
-                    <a href="/product/2"><h3 class ="Descripcion">Whiskey Jack Daniels Honey 750ml</h3></a>
+                    <a href=<%= `/product/${element._id}` %>> <h3 class ="Descripcion"><%= element.title %></h3></a>
                     <div>
-                        <p>760</p> 
+                        <p><%= element.price %></p>
                         <span>Puntos</span>
                     </div>
                 </div>
             </article>
+        <% }) %>
 
-            <article class="cardProducto">
-                <img src="/img/imagenDefaultProducto.png" alt="">
-                <div>
-                    <h3>NOMBRE DEL PRODUCTO O SERVICIO</h3>
-                    <div>
-                        <p>XX.XXX</p>
-                        <span>Puntos</span>
-                    </div>
-                </div>
-            </article>
-
-
-            <article class="cardProducto">
-                <img src="/img/imagenDefaultProducto.png" alt="">
-                <div>
-                    <h3>NOMBRE DEL PRODUCTO O SERVICIO</h3>
-                    <div>
-                        <p>XX.XXX</p>
-                        <span>Puntos</span>
-                    </div>
-                </div>
-            </article>
-
-
-            <article class="cardProducto">
-                <img src="/img/imagenDefaultProducto.png" alt="">
-                <div>
-                    <h3>NOMBRE DEL PRODUCTO O SERVICIO</h3>
-                    <div>
-                        <p>XX.XXX</p>
-                        <span>Puntos</span>
-                    </div>
-                </div>
-            </article>
         </div>
     </section>
 
@@ -93,100 +65,19 @@
         <h2 class="titulo_seccion"> Los más pedidos</h2>
         <div class="container_lista_productos">
 
-            <article class="cardProducto">
-                <img src="img/images (1).jpeg" alt="">
-                <div>
-                    <h3>Coca Cola Lata 200 mL Pack Original x8</h3>
+            <% mostWantedProducts.forEach(element => { %>
+                <article class="cardProducto">
+                    <img src=<%= element.image %> alt=<%=element.title%>>
                     <div>
-                        <p>760</p>
-                        <span>Puntos</span>
+                        <a href=<%= `/product/${element._id}` %>> <h3 class ="Descripcion"><%= element.title %></h3></a>
+                        <div>
+                            <p><%= element.price %></p>
+                            <span>Puntos</span>
+                        </div>
                     </div>
-                </div>
-            </article>
-
-
-            <article class="cardProducto">
-                <img src="/img/imagenDefaultProducto.png" alt="">
-                <div>
-                    <h3>NOMBRE DEL PRODUCTO O SERVICIO</h3>
-                    <div>
-                        <p>XX.XXX</p>
-                        <span>Puntos</span>
-                    </div>
-                </div>
-            </article>
-
-
-            <article class="cardProducto">
-                <img src="/img/imagenDefaultProducto.png" alt="">
-                <div>
-                    <h3>NOMBRE DEL PRODUCTO O SERVICIO</h3>
-                    <div>
-                        <p>XX.XXX</p>
-                        <span>Puntos</span>
-                    </div>
-                </div>
-            </article>
-
-
-            <article class="cardProducto">
-                <img src="/img/imagenDefaultProducto.png" alt="">
-                <div>
-                    <h3>NOMBRE DEL PRODUCTO O SERVICIO</h3>
-                    <div>
-                        <p>XX.XXX</p>
-                        <span>Puntos</span>
-                    </div>
-                </div>
-            </article>
-
-
-            <article class="cardProducto">
-                <img src="/img/imagenDefaultProducto.png" alt="">
-                <div>
-                    <h3>NOMBRE DEL PRODUCTO O SERVICIO</h3>
-                    <div>
-                        <p>XX.XXX</p>
-                        <span>Puntos</span>
-                    </div>
-                </div>
-            </article>
-
-
-            <article class="cardProducto">
-                <img src="/img/imagenDefaultProducto.png" alt="">
-                <div>
-                    <h3>NOMBRE DEL PRODUCTO O SERVICIO</h3>
-                    <div>
-                        <p>XX.XXX</p>
-                        <span>Puntos</span>
-                    </div>
-                </div>
-            </article>
-
-
-            <article class="cardProducto">
-                <img src="/img/imagenDefaultProducto.png" alt="">
-                <div>
-                    <h3>NOMBRE DEL PRODUCTO O SERVICIO</h3>
-                    <div>
-                        <p>XX.XXX</p>
-                        <span>Puntos</span>
-                    </div>
-                </div>
-            </article>
-
-
-            <article class="cardProducto">
-                <img src="/img/imagenDefaultProducto.png" alt="">
-                <div>
-                    <h3>NOMBRE DEL PRODUCTO O SERVICIO</h3>
-                    <div>
-                        <p>XX.XXX</p>
-                        <span>Puntos</span>
-                    </div>
-                </div>
-            </article>
+                </article>
+            <% }) %>
+            
         </div>
     </section>
 

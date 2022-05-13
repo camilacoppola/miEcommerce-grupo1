@@ -2,6 +2,9 @@
 @import url('variables.css');
 @import url('footer.css');
 @import url('headerSinSearch.css');
+@import url('erroresValidacion.css');
+@import url("card.css");
+
 
 *{
     margin: 0px;
@@ -20,15 +23,8 @@ main{
 }
 
 body{
-    background-image: linear-gradient(to bottom, var(--colorVerde) 50%, var(--colorGris) 50%);
+    background-image: linear-gradient(to bottom, var(--colorVerde) 50%, var(--colorBlanco) 50%);
     background-repeat: no-repeat;
-}
-
-.card{
-    background: var(--colorBlanco);
-    border-radius: 16px;
-    padding: 8px;
-    color:  var(--colorNegro);
 }
 
 #cardRegister{
@@ -69,6 +65,22 @@ body{
     background: var(--colorVerde);
 }
 
+#seccionCuenta p{
+    color: var(--colorNegro);
+    font-family: Open Sans;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: 0em;
+    text-align: center;
+}
+
+#seccionCuenta p a{
+    color: inherit;
+    text-decoration: underline;
+}
+
+
 .input {
     width: auto;
     height: 32px;
@@ -96,7 +108,7 @@ body{
 #tituloRegistro{
     font-family: 'Open Sans';
     font-style: normal;
-    font-weight: 400;
+    font-weight: bolder;
     font-size: 32px;
     line-height: 44px;
 }

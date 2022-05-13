@@ -5,6 +5,7 @@
 @import url('productoCard.css');
 @import url('inputs.css');
 @import url('barraNavegacion.css');
+@import url('button.css');
 
 *{
     margin: 0px;

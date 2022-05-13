@@ -3,6 +3,9 @@
 @import url('headerConSearch.css');
 @import url('variables.css');
 @import url('inputs.css');
+@import url('card.css');
+@import url('button.css');
+
 
 * {
     margin: 0;
@@ -11,8 +14,16 @@
     font-family: 'Open Sans', sans-serif;
 }
 
+footer{
+    position: relative;
+    bottom: 0;
+    margin-top: 3rem;
+
+}
+
 body{
     background-color: var(--colorGris);
+    position: relative;
 }
 
 main{
@@ -167,6 +178,26 @@ main{
     padding: 1rem 0rem;
 }
 
+#cardError {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    min-height: 10vh;
+    margin: auto;
+}
+
+#cardError a {
+    align-self: flex-end;
+    text-decoration: none;
+}
+
+#cardError img {
+    width: 50%;
+    transform: translateX(-10%);
+}
+
+
 @media screen and (min-width: 720px) {
     main{
         padding-left: auto;
@@ -192,5 +223,8 @@ main{
     
     .articuloElemento{
         flex-direction: row;
+    }
+    #cardError{
+        width: 70%;
     }
 }

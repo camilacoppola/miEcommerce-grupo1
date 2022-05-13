@@ -1,16 +1,21 @@
 const router = require('express').Router()
 
-const {carrito} = require('../controllers/carritoController')
+const {carrito, quitarDelCarrito, getCarrito} = require('../controllers/carritoController')
 const {product} = require('../controllers/productController')
 const {mainRender} = require('../controllers/mainController')
 const { checkout } = require('../controllers/checkoutController')
+const notImplementedMiddleware = require('../middlewares/notImplementedMiddleware')
 
 router.get("/", mainRender)
 
 router.get("/product/:id", product)
 
-router.get("/cart", carrito)
+router.get('/cart', getCarrito)
 
-router.get("/checkout", checkout)
+router.post("/cart", carrito)
+
+router.post("/cart/quitar", quitarDelCarrito)
+
+router.get("/checkout", notImplementedMiddleware, checkout)
 
 module.exports = router
