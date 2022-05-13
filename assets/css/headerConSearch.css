@@ -3,7 +3,7 @@
     min-height: 10vh;
     padding: 1rem;
     width: 100%;
-    background-color: var(--colorGris);
+    background-color: var(--colorBlanco);
     border-bottom: var(--colorGrisOscuro) solid 1px;
 }
 
@@ -85,12 +85,45 @@
     padding: 8px;
 }
 
-#botonDesloggear{
+.botonDesloggear{
     display: none;
     position: absolute;
 }
 
-#botonImagenPerfil:hover #botonDesloggear{
+.botonDesloggear ul {
+    list-style: none;
+    text-align: start;
+    width: 100%;
+}
+
+.botonDesloggear ul > li img {
+    width: 32px;
+    height: 32px;
+}
+
+.botonDesloggear ul  li:nth-child(2) {
+    border-top:2px solid  var(--colorGris);
+}
+
+.botonDesloggear ul li {
+    padding: 10px;
+}
+
+.botonDesloggearVisible {
+    display: inline-block;
+    background-color: var(--colorBlanco);
+    top: 100%;
+    right: 0;
+    border-radius: 20px;
+    z-index: 1;
+    width: 200px;
+    color: var(--colorNegro);
+    border-top-style: solid;
+    border-top-width: 3px;
+    border-top-color: var(--colorGris);
+}
+
+/* #botonImagenPerfil:hover #botonDesloggear{
     display: inline-block;
     background-color: var(--colorGrisOscuro);
     padding: 0.5rem 1rem;
@@ -101,7 +134,7 @@
     border-top-style: solid;
     border-top-width: 3px;
     border-top-color: var(--colorGris);
-}
+} */
 
 #botonImagenPerfil:hover #botonDesloggear:hover{
     background: rgb(57, 62, 63);

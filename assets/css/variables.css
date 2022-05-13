@@ -1,8 +1,9 @@
 :root{
     --colorGris:#EFEFEF;
-    --colorGrisOscuro: rgba(73, 79, 81, 1);
-    --colorVerde: rgba(12, 176, 147, 1);
-    --colorBlanco: rgba(255, 255, 255, 1);
-    --colorNegro: rgba(0, 0, 0, 1);
-    --colorRojo: rgba(255, 0, 0, 1);
+    --colorGrisOscuro:#494f51;
+    --colorVerde: #0cb093;
+    --colorBlanco: #ffffff;
+    --colorNegro: #000000;
+    --colorRojo: #ff0000;
+    --colorNegroClaro: rgba(51, 51, 51, 1);
 }

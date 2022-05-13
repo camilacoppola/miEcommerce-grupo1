@@ -4,6 +4,6 @@
     min-height: 10vh;
     padding: 1rem;
     width: 100%;
-    background-color: var(--colorGris);
+    background-color: var(--colorBlanco);
     border-bottom: var(--colorGrisOscuro) solid 1px;
 }

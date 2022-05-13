@@ -23,7 +23,7 @@ main{
 }
 
 body{
-    background-image: linear-gradient(to bottom, var(--colorVerde) 50%, var(--colorGris) 50%);
+    background-image: linear-gradient(to bottom, var(--colorVerde) 50%, var(--colorBlanco) 50%);
     background-repeat: no-repeat;
 }
 
@@ -66,7 +66,7 @@ body{
 }
 
 #seccionCuenta p{
-    color: black;
+    color: var(--colorNegro);
     font-family: Open Sans;
     font-size: 12px;
     font-weight: 400;

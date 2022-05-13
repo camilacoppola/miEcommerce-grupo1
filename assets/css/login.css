@@ -14,7 +14,7 @@
 }
 
 .contenedor-flex {
-    background: linear-gradient(to bottom, rgba(12, 176, 147, 1) 50%, #EFEFEF 50%);
+    background: linear-gradient(to bottom, var(--colorVerde) 50%, var(--colorBlanco) 50%);
     background-repeat: no-repeat;
     height: 90vh;
 }
@@ -57,7 +57,7 @@
     background: #494F51;
     border-radius: 16px;
     border: none;
-    color: white;
+    color: var(--colorBlanco);
 }
 
 .contenedor-registrarse {
@@ -65,7 +65,7 @@
 }
 
 .contenedor-registrarse p {
-    color: black; 
+    color: var(--colorNegro); 
     font-family: Open Sans;
     font-size: 12px;
     font-weight: 400;
@@ -75,6 +75,6 @@
 }
 
 .contenedor-registrarse a {
-    color: black; 
+    color: var(--colorNegro); 
  }
 
