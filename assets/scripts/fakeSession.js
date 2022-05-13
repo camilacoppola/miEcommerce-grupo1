@@ -6,10 +6,10 @@ document.addEventListener('DOMContentLoaded', () => {
             location.replace("/users/login");
     }
 
-    document.getElementById("botonDesloggear").addEventListener('click', () => {
-        if(encuentra){
-            localStorage.removeItem("logged");
-            location.replace("/users/login");
-        }
-    })
+    // document.querySelector(".botonDesloggear").addEventListener('click', () => {
+    //     if(encuentra){
+    //         localStorage.removeItem("logged");
+    //         location.replace("/users/login");
+    //     }
+    // })
 });

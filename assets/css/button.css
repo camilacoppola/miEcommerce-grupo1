@@ -44,6 +44,7 @@
 
 .buttonBlancoAVerde:hover{
     background-color: var(--colorVerde);
+    color: var(--colorBlanco);
 }
 
 .buttonVerde:disabled, .buttonGris:disabled, .buttonGrisAVerde:disabled, .buttonBlancoAVerde:disabled {
