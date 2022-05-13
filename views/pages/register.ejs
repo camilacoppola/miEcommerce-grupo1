@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/register.css">
     <title>Document</title>
+    <script src="/scripts/register.js"></script>
 </head>
 <body>
     <%- include('../partials/header_sin_search') %> 
@@ -17,7 +18,9 @@
                 <input class="input" type="email" name="email" id="inputEmail" placeholder="Tu email" autocomplete="off">
                 <% if (errors.email) { %>
                  <span class="errorVal"><%=errors.email.msg%></span>
-                <% } %>
+                <% }else{ %>
+                    <span></span>
+                <% } %> 
                 <label for="inputPW1"></label>
                 <input class="input" type="password" name="password1" id="inputPW1" placeholder="Tu nueva contraseña" autocomplete="off">
                 <label for="inputPW2"></label>
@@ -33,7 +36,7 @@
                             <span class="errorVal"> <%=errors.password2?.msg %> </span>
                         <% } %>
                 <% }} %>
-                <button class="button" type="submit">Crear Cuenta</button>
+                <button class="buttonGris" type="submit" id="buttonRegister" disabled>Crear Cuenta</button>
             </form>
         </section>
         <section id="seccionCuenta">

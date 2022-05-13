@@ -23,6 +23,7 @@ window.addEventListener('load', () => {
             spanUsuario.innerHTML=``
             spanUsuario.classList.remove('errorVal')
         }else{
+            buttonIniciarSesion.setAttribute('disabled',true);
             spanUsuario.innerHTML=`Email Incorrecto`
             spanUsuario.classList.add('errorVal')
         }
@@ -35,6 +36,7 @@ window.addEventListener('load', () => {
             spanContrasenia.innerHTML=``
             spanContrasenia.classList.remove('errorVal')
         }else{
+            buttonIniciarSesion.setAttribute('disabled',true);
             spanContrasenia.innerHTML=`La longitud de la password debe ser minimo de 8 caracteres`
             spanContrasenia.classList.add('errorVal')
         }
