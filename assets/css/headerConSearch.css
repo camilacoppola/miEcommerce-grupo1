@@ -40,13 +40,13 @@
     width: 100%;
 }
 
-#botonCarritoCompras, #botonImagenPerfil{
+#botonCarritoCompras{
     background-color: var(--colorGrisOscuro);
     padding: 0.4rem;
     border-radius: 20px;
 }
 
-#botonCarritoCompras:hover, #botonImagenPerfil:hover{
+#botonCarritoCompras:hover{
     background: rgb(57, 62, 63);
 }
 
@@ -86,56 +86,31 @@
 }
 
 .botonDesloggear{
-    display: none;
     position: absolute;
+    top: 100%;
+    right: 0;
+    display: none;
+    padding: 0.5rem;
+    min-width: 200px;
 }
 
-.botonDesloggear ul {
-    list-style: none;
-    text-align: start;
+.botonDesloggear > li{
+    padding: 0.5rem;
     width: 100%;
+    list-style: none;
 }
 
-.botonDesloggear ul > li img {
-    width: 32px;
-    height: 32px;
+.botonDesloggear > li > *{
+    width: 100%;
+    margin-left: 2rem; 
 }
 
-.botonDesloggear ul  li:nth-child(2) {
-    border-top:2px solid  var(--colorGris);
+.botonDesloggear > li > img{
+    width: 1rem;
+    aspect-ratio: 1 / 1;
 }
 
-.botonDesloggear ul li {
-    padding: 10px;
-}
-
-.botonDesloggearVisible {
-    display: inline-block;
-    background-color: var(--colorBlanco);
-    top: 100%;
-    right: 0;
-    border-radius: 20px;
-    z-index: 1;
-    width: 200px;
-    color: var(--colorNegro);
-    border-top-style: solid;
-    border-top-width: 3px;
-    border-top-color: var(--colorGris);
-}
-
-/* #botonImagenPerfil:hover #botonDesloggear{
-    display: inline-block;
-    background-color: var(--colorGrisOscuro);
-    padding: 0.5rem 1rem;
-    top: 100%;
-    right: 0;
-    border-radius: 1rem 0 1rem 1rem;
-    color: var(--colorBlanco);
-    border-top-style: solid;
-    border-top-width: 3px;
-    border-top-color: var(--colorGris);
-} */
-
-#botonImagenPerfil:hover #botonDesloggear:hover{
-    background: rgb(57, 62, 63);
+.botonDesloggearVisible{
+    display: flex;
+    flex-direction: column;
 }
