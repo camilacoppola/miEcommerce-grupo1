@@ -3,7 +3,7 @@ window.addEventListener("load", ()=>{
     let botonDesplegable = document.querySelector(".botonDesloggear");
 
     botonImagen.addEventListener ("click", (e)=>{
-        if(botonDesplegable.classList.contains('botonDesloggearVisible' && !botonImagen.contains(e.target))){
+        if(botonDesplegable.classList.contains('botonDesloggearVisible') && !botonDesplegable.contains(e.target)){
             botonDesplegable.classList.remove('botonDesloggearVisible')
         }else{
             botonDesplegable.classList.add('botonDesloggearVisible')
@@ -11,7 +11,7 @@ window.addEventListener("load", ()=>{
     })
 
     document.addEventListener('click', (e) => {
-        if(!botonImagen.contains(e.target)){
+        if(!botonImagen.contains(e.target) && botonDesplegable.classList.contains('botonDesloggearVisible')){
             botonDesplegable.classList.remove('botonDesloggearVisible');
         }
     })
