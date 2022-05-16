@@ -15,7 +15,7 @@ function crearAlerta(elemento, titulo, cuerpo, boton){
             e.preventDefault();
 
             let body = document.querySelector('body');
-            let mensajeError = document.createElement('div');
+            let mensajeError = document.createElement('div'); 
             let filtroNegro = document.createElement('div');
 
             filtroNegro.classList.add('filtroNegro')

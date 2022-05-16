@@ -256,3 +256,28 @@ main {
     flex-direction: row;
   }
 }
+@media screen and (max-width:720px) {
+  .productosCards{
+    flex-direction: column;
+  }
+  .productosCards article{
+    width: 100%;
+    flex-direction: row;
+  }
+  .productosCards article img {
+    width: 128px;
+  }
+  .productosCards .cardProducto > div {
+    flex-direction: column;
+    margin-left: 30px;
+    height: initial;
+  }
+  .productosCards .cardProducto div h3 {
+    border: none;
+  }
+  .productosCards .cardProducto > div > div {
+    padding: 0px;
+
+  }
+
+}

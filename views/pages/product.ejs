@@ -59,7 +59,7 @@
             <article class="cardProducto">
                 <img src=<%= element.image %> alt=<%=element.title%>>
                 <div>
-                    <a href=<%= `/product/${element._id}` %>> <h3 class ="Descripcion"><%= element.title %></h3></a>
+                    <a id="descripcion" href=<%= `/product/${element._id}` %>> <h3 class ="Descripcion"><%= element.title %></h3></a>
                     <div>
                         <p><%= element.price %></p>
                         <span>Puntos</span>

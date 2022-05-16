@@ -71,3 +71,29 @@
 .cardProducto > div > a:hover{
     color: var(--colorVerde);
 }
+
+
+@media screen and (max-width:720px) {
+    .productosCards{
+      flex-direction: column;
+    }
+    .cardProducto{
+      width: 100%;
+      flex-direction: row;
+    }
+    .cardProducto img {
+      width: 128px;
+    }
+    .cardProducto > div {
+      flex-direction: column;
+      margin-left: 30px;
+      height: initial;
+    }
+    .cardProducto div h3, .cardProducto #descripcion {
+      border: none;
+    }
+    .cardProducto > div > div {
+      padding: 0px;  
+    }
+  
+  }

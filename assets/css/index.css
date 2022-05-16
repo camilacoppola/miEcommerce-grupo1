@@ -15,11 +15,11 @@
     font-family: 'Open Sans', sans-serif;
 }
 
-.navInferior{
+/*.navInferior{
     position: relative;
     left: 50%;
     transform: translateX(-50%);
-  }
+  }*/
 
 footer{
     margin-top: 3rem;
