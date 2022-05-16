@@ -25,10 +25,8 @@
       <section class="articleCard">
         <div class="imagenesChicas">
             <% let cantidadFotos = 2; %>
-              <% if (producto.gallery.length == 0) { %>
-                <button id="fotoChica1"><img src="<%=producto.image%>" alt="Foto 1 del producto"></button>               
-              <% } else{ %>
-                <button id="fotoChica1"><img src="<%=producto.image%>" alt="Foto 1 del producto"></button>               
+            <button id="fotoChica1"><img src="<%=producto.image%>" alt="Foto 1 del producto"></button>               
+              <% if (producto.gallery.length !== 0) { %>
                 <% producto.gallery.forEach(image => { %>
                   <% if (image !== producto.image) { %>
                     <button id="fotoChica<%=cantidadFotos%>"><img src="<%=image%>" alt="Foto <%= cantidadFotos %> del producto"></button>
@@ -38,8 +36,8 @@
         </div>
         <figure class="imagenPrincipal">
           <img
-            src=<%= producto.image %> 
-            alt=<%= producto.title %> 
+            src="<%=producto.image%>"
+            alt="<%= producto.title %>" 
           />
         </figure>
         <aside class="descripcion">

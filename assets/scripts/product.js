@@ -3,7 +3,19 @@ window.addEventListener('load', () =>{
     let imagenGrande = document.querySelector(".imagenPrincipal img");
     let botonActualSeleccionado = null;
 
-    //Seleccionador de imágenes
+    //Poner imagen principal genérica si no tiene src
+    if(imagenGrande.getAttribute('src') !== "" || botonesImagenes.length > 1){
+        imagenGrande.setAttribute('src', botonesImagenes[0].querySelector("img").getAttribute('src'));
+    } else{
+        imagenGrande.setAttribute('src', '/img/imagenUndefined.png')
+        botonesImagenes[0].querySelector("img").setAttribute('src', '/img/imagenUndefined.png')
+    }
+
+    //Seleccionar primera imágen como default
+    botonesImagenes[0].classList.add('imagen_seleccionada');
+    botonActualSeleccionado = botonesImagenes[0];
+
+    //Seleccionador de imágenes <%=producto.image%>
     botonesImagenes.forEach(botonImg => {
         botonImg.addEventListener('click', () => {
             if(botonImg !== botonActualSeleccionado){
@@ -13,13 +25,5 @@ window.addEventListener('load', () =>{
                 botonActualSeleccionado = botonImg;
             }
         })
-    })
-
-    botonesImagenes.forEach(botonImg => {
-        if (botonImg.querySelector("img").getAttribute('src') == imagenGrande.getAttribute('src')){
-            botonImg.classList.add("imagen_seleccionada");
-            botonActualSeleccionado = botonImg;
-            return true;
-        }
     })
 })
