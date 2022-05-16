@@ -8,7 +8,7 @@
     <title>Cart</title>
     <script src="/scripts/fakeSession.js"></script>
 </head>
-<body>
+<body class="bodyCart">
     <%- include('../partials/header_con_search')  %>
     <main>
         <a href="/" id="linkVolverAtras"><img src="/img/arrow-left.svg" alt="">Volver</a>
@@ -30,7 +30,7 @@
                         <div class="parteBotonesPrecio">
                             <form action="/cart/quitar" method="post">
                                 <input type="hidden" name='idProducto' value=<%= producto.id %>>
-                                <input type="submit" class="buttonGrisAVerde" value="Quitar">
+                                <input type="submit"  class="buttonGrisAVerde quitar" value="Quitar">
                             </form>
                             
                             <div class="buttonCantidad"><button class="buttonDisminuir">-</button> <%= producto.cantidad %> <button class="buttonAumentar">+</button></div>

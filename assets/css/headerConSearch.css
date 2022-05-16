@@ -3,7 +3,7 @@
     min-height: 10vh;
     padding: 1rem;
     width: 100%;
-    background-color: var(--colorBlanco);
+    background-color: var(--colorBlancoHeader);
     border-bottom: var(--colorGrisOscuro) solid 1px;
 }
 
@@ -41,7 +41,7 @@
 }
 
 #botonCarritoCompras{
-    background-color: var(--colorGrisOscuro);
+    background-color: var(--colorGrisCarrito);
     padding: 0.4rem;
     border-radius: 20px;
 }
@@ -62,12 +62,13 @@
     margin-left: 0.5rem;
     height: 32px;
     padding-right: 1.3em;
+    background-color: var(--colorGrisCarrito);
 }
 
 
 
 #nombreUsuario{
-    color: var(--colorBlanco);
+    color: var(--colorBlancoUsuario);
     margin-left: 0.5em;
 }
 
@@ -118,9 +119,10 @@
 }
 
 .botonDesloggear > li > *{
+    background-color: var(--colorBlanco);
     padding: 0.5rem 2rem;
     display: block;
-    color: var(--colorGrisOscuro);
+    color: var(--colorGrisOscuroLetras);
     font-weight: 600;
     font-size: 0.8rem;
     white-space: nowrap;
@@ -128,7 +130,7 @@
 }
 
 .botonDesloggear > li > button{
-    color: var(--colorGrisOscuro);
+    color: var(--colorGrisOscuroLetras);
     background-color: none;
     font-family: 'Open Sans', sans-serif;
 }
@@ -148,7 +150,7 @@
 
 .botonDesloggearVisible{
     display: flex;
-    flex-direction: column;
+    flex-direction: column; 
 }
 
 @media screen and (max-width: 720px) {

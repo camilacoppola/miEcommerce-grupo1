@@ -7,14 +7,15 @@
     <title>Login</title>
     <link rel="stylesheet" href="/css/login.css">
     <script src="/scripts/login.js"></script>
+    <script src="/scripts/registerLogin.js"></script>
 </head>
-<body>
+<body class="bodyRegister">
     <%- include("../partials/header_sin_search") %>
     <main class="contenedor-flex">
-        <section class="card">
-            <form class="formulario" action="/users/login" method="POST">
+        <section class="card tarjetaLogin">
+            <form class="formulario" id="formRegistro" action="/users/login" method="POST">
                 <h1>¡Hola!</h1>
-                <input class="usuario" id="user" type="text" placeholder="Tu nombre de usuario" name="user">
+                <input class="usuario inputForm" id="user" type="text" placeholder="Tu nombre de usuario" name="user">
                 <% if (errors.user) { %>
                  <span class="errorVal">
                     <%= errors.user.msg %>
@@ -22,7 +23,7 @@
                 <% }else{ %>
                     <span></span>
                 <% } %>
-                <input class="password" id="password" type="password" placeholder="Tu contraseña" name="password">
+                <input class="password inputForm" id="password" type="password" placeholder="Tu contraseña" name="password">
                 <% if (errors.password) { %>
                     <span class="errorVal">
                         <%=errors.password?.msg%>

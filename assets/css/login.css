@@ -6,6 +6,7 @@
 @import url('erroresValidacion.css');
 @import url("card.css");
 @import url('button.css');
+@import url('darkMode.css');
 
 * {
     box-sizing: border-box;

@@ -46,7 +46,7 @@
  }
 
  .navInferior .botonera p{
-    color: var(--colorBlanco);
+    color: var(--colorBlancoNav);
  }
 
  .botonera > a > img{

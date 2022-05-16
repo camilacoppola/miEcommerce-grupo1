@@ -1,7 +1,7 @@
 @import url('variables.css');
 
 .cardProducto{
-    background-color: var(--colorBlanco);
+    background-color: var(--colorBlancoTarjetas);
     display: flex;
     flex-direction: column;
     padding: 16px 8px;
@@ -46,6 +46,7 @@
 
 .cardProducto > div > div > p{
     font-weight: bolder;
+    color: var(--colorNegroPuntos)
 }
 
 .cardProducto > div > div > span{

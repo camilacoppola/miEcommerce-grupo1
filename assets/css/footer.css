@@ -1,7 +1,7 @@
 footer {
     border-top: 1px solid #CCCCCC;
-    background-color: var(--colorBlanco);
-    width: 100%;
+    background-color: var(--colorGris);
+    width: 100vw;
     height: 64px;
     display: flex;
     justify-content: space-around;
@@ -13,8 +13,8 @@ footer {
 
 
 footer img {
-    filter:  opacity(0.4); 
-}  
+    filter:invert(50%);
+}
 
 .redes,.app-store {
     margin-right: 15px;

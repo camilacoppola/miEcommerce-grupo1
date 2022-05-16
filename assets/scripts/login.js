@@ -19,7 +19,9 @@ window.addEventListener('load', () => {
     inputUsuario.addEventListener('input', () => {
         inputUsuario.value = inputUsuario.value.trim();
         if(emailCompleto(inputUsuario.value)){
-            buttonIniciarSesion.removeAttribute('disabled')
+            if(passwordCompleta(inputContrasenia.value)) {
+                buttonIniciarSesion.removeAttribute('disabled')
+            }
             spanUsuario.innerHTML=``
             spanUsuario.classList.remove('errorVal')
         }else{
@@ -32,7 +34,9 @@ window.addEventListener('load', () => {
     inputContrasenia.addEventListener('input', () => {
         inputContrasenia.value = inputContrasenia.value.trim();
         if(passwordCompleta(inputContrasenia.value)){
-            buttonIniciarSesion.removeAttribute('disabled')
+            if(emailCompleto(inputUsuario.value)){
+                buttonIniciarSesion.removeAttribute('disabled')
+            }
             spanContrasenia.innerHTML=``
             spanContrasenia.classList.remove('errorVal')
         }else{

@@ -1,0 +1,156 @@
+.dark-mode.bodyIndex{
+    background: linear-gradient(to bottom, #222222 18%, var(--colorVerde) 18%, var(--colorVerde) 29%, #222222 29%);
+}
+
+.dark-mode.bodyProduct{
+    background-color: #222222;
+}
+
+.dark-mode .cardProducto {
+    background-color: #494f51;
+}
+
+.dark-mode .cardProducto p,.dark-mode .cardProducto span, .dark-mode output, .dark-mode p {
+    color: white;
+}
+
+.dark-mode .cardProducto > div h3 {
+    border-right: solid 1px white;
+}
+
+.dark-mode h1,.dark-mode h2,.dark-mode h3,.dark-mode h4,.dark-mode h5,.dark-mode h6 {
+    color: white;
+}
+
+
+.dark-mode .header {
+    background-color: rgba(0, 0, 0, 25%);
+    border-bottom: rgba(0, 0, 0, 50%) solid 1px;
+}
+
+.dark-mode footer {
+    background-color: #222222;
+}
+
+.dark-mode footer p, .dark-mode footer h6 {
+    color: #999999;
+}
+
+.dark-mode .botonDesloggear {
+    background-color: #494f51;
+    color: white;
+}
+
+.dark-mode .botonDesloggear li > *:hover {
+    background-color: var(--colorVerde);
+    cursor: pointer;
+}
+
+.dark-mode .botonDesloggear > li > * {
+    color: white;
+    background-color: #494f51;
+}
+
+.dark-mode #bodyProduct {
+    background: #222222;
+}
+
+.dark-mode .navegacion {
+    color: white;
+}
+
+.dark-mode .navegacion img {
+    filter: invert(100%);
+}
+
+.dark-mode .articleCard {
+    background-color: #494f51;
+}
+
+.dark-mode .descripcion .buttonGris {
+    color:white;
+    border: 2px solid rgba(255,255,255,50%)
+}
+
+.dark-mode .descripcion > p {
+    color: white;
+}
+
+
+.dark-mode #linkVolverAtras {
+    color: white;
+}
+
+.dark-mode .articuloElemento {
+    background-color: #494f51;
+}
+
+.dark-mode .quitar {
+    background-color: #333333;
+    border: 2px solid rgba(255,255,255,50%)
+}
+
+.dark-mode .quitar:hover {
+    background-color: var(--colorVerde);
+}
+
+.dark-mode .buttonCantidad {    
+    background-color: #333333;
+    border: 2px solid rgba(255,255,255,50%)
+}
+
+.dark-mode .buttonDisminuir, .dark-mode .buttonAumentar, .dark-mode .buttonCantidad {
+    color: white;
+}
+
+.dark-mode .precioProducto {
+    color: white;
+}
+
+.dark-mode.bodyCart {
+    background-color: #222222;
+}
+.dark-mode #linkVolverAtras > img{
+    filter: invert(100%);
+}
+
+.dark-mode.bodyRegister {
+    background: linear-gradient(to bottom, var(--colorVerde) 50%, #222222 50%);
+}
+
+
+/*.dark-mode .header {
+    background-color: rgba(0, 0, 0, 25%);
+    border-bottom: rgba(0, 0, 0, 50%) solid 1px;
+    
+}*/
+
+.dark-mode .tarjetaLogin, .dark-mode .tarjetaRegister {
+    background-color: #494f51;
+}
+.dark-mode .inputForm{
+    background-color: #494f51;
+    color: white;
+    border: 2px solid rgba(255,255,255,50%)
+}
+
+.dark-mode #buttonRegister, .dark-mode #buttonIniciarSesion{
+    background-color: #222222;
+}
+
+.dark-mode #seccionCuenta > p{
+    color: white;
+}
+
+.dark-mode .contenedor-flex {
+    background: linear-gradient(to bottom, var(--colorVerde) 50%, #222222 50%);
+}
+
+.dark-mode .contenedor-registrarse > p, .dark-mode .contenedor-registrarse > p > a {
+    color: white;
+}
+
+.dark-mode.bodyRegister .headerSinSearch{
+    background-color: #000000;
+    border-bottom: rgba(0, 0, 0, 50%) solid 1px;
+}

@@ -6,6 +6,7 @@
 @import url('inputs.css');
 @import url('barraNavegacion.css');
 @import url('button.css');
+@import url('darkMode.css');
 
 *{
     margin: 0px;
@@ -142,6 +143,7 @@ body {
     margin-bottom: 1.5rem;
     font-weight: 400;
     font-size: 2rem;
+    color: var(--colorTitulo);
 }
 
 @media screen and (min-width: 720px) {
@@ -163,6 +165,8 @@ body {
         width: calc((100% / 2) - 1rem);
     }
 }
+
+
 
 @media screen and (min-width: 1024px) {
     #banners_promocion{
