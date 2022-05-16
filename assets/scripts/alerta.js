@@ -38,6 +38,7 @@ function crearAlerta(elemento, titulo, cuerpo, boton){
     }else{
         let mensajeError = document.createElement('div');
         let filtroNegro = document.createElement('div');
+        let body = document.querySelector('body');
 
         filtroNegro.classList.add('filtroNegro')
         mensajeError.classList.add('alertError');
@@ -69,4 +70,4 @@ function prevenirScroll(evento){
     window.scrollTo(positionX, positionY);
 }
 
-export {crearAlerta, prevenirScroll}
+// export {crearAlerta, prevenirScroll}

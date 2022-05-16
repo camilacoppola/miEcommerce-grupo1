@@ -220,11 +220,13 @@ main {
 
   .imagenPrincipal img{
     height: 100%;
+    object-fit: contain;
   }
 
   .imagenPrincipal{
     width: 100%;
     align-content: stretch;
+    aspect-ratio: 1 / 1;
   }
 
   .imagenesChicas{

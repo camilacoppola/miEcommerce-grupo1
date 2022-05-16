@@ -14,18 +14,19 @@
     transform: translate(-50%, -50%);
     background-color: var(--colorBlanco);
     min-width: 80vw;
+    max-width: 90vw;
+
     box-shadow: 0px 0px 0.6rem 0.3rem #00000040;
-    aspect-ratio: 4 / 1;
 }
 
-.alertError h6{
+.alertError h6, .alertError p{
     font-size: 1rem;
     font-weight: 900;
 }
 
 .alertError p{
-    font-size: 1rem;
     font-weight: 400;
+    word-break: break-word;
 }
 
 .alertError button{
@@ -53,5 +54,10 @@
 @media screen and (min-width: 720px){
     .alertError{
         min-width: 50vw;
+        max-width: 90vw;
     }
+}
+
+.alertError :not(:last-child){
+    margin-bottom: 0.5rem;
 }

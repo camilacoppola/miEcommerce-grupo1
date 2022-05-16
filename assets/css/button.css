@@ -52,4 +52,7 @@
     background-color: lightgrey;
 }
 
+.buttonGrisAVerdeClickeado{
+    background-color: var(--colorVerde);
+}
 

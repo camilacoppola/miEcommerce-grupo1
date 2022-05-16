@@ -1,7 +1,8 @@
-import {crearAlerta, prevenirScroll} from './alerta.js'
+// import {crearAlerta, prevenirScroll} from './alerta.js'
 
 window.addEventListener('load', () =>{
     let buttonPagar = document.getElementById('buttonPagar');
-
-    crearAlerta(buttonPagar, 'Error de mensaje', 'aaaaaaaaaaaaaaaaaaaaaa', 'aceptar');
+    if (buttonPagar !== null){
+        crearAlerta(buttonPagar, 'Error', 'La página a la que intentas ingresar, no está disponible de momento', '¡Entiendo!');
+    }
 })
