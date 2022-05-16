@@ -3,6 +3,7 @@
 .cardProducto{
     background-color: var(--colorBlanco);
     display: flex;
+    justify-content: flex-start;
     flex-direction: column;
     padding: 16px 8px;
     border-radius: 16px;
@@ -17,26 +18,29 @@
     object-position: center;
     border-radius: 0.5rem;
     transition: object-fit 2s linear 0s;
-}
-
-.cardProducto:hover img{
-    object-fit: cover;
+    border-radius: 16px;
+    background-color: white;
 }
 
 .cardProducto > div{
     display: flex;
-    margin-top: 8px;
     width: 100%;
+    margin-top: 0.5rem;
+    height: 33%;
 }
 
 .cardProducto > div h3{
     padding-right: 8px;
     flex-grow: 3;
-    border-right: solid 1px var(--colorGrisOscuro);
     font-size: 1rem;
     font-weight: bolder;
     text-overflow: ellipsis;
     overflow-wrap: break-word;
+}
+
+.cardProducto > div > a{
+    border-right: solid 1px var(--colorGrisOscuro);
+    height: 100%;
 }
 
 .cardProducto > div > div{
@@ -46,6 +50,7 @@
 
 .cardProducto > div > div > p{
     font-weight: bolder;
+    font-size: 1.5rem;
 }
 
 .cardProducto > div > div > span{

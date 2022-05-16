@@ -90,6 +90,14 @@ main {
   margin-right: 8px;
 }
 
+.imagen_seleccionada{
+  box-shadow: 0px 0px 2px 3px #00000040;
+}
+
+.imagen_seleccionada{
+  outline: var(--colorVerde) solid 2px;
+}
+
 .imagenesChicas{
   display: flex;
   flex-direction: row;
@@ -100,10 +108,11 @@ main {
 .imagenesChicas img {
   height: 48px;
   width: 48px;
-  border-radius: 8px;
+  object-fit: contain;
 }
 
 .imagenesChicas button {
+  border-radius: 8px;
   height: 48px;
   width: 48px;
   background-color: white;
