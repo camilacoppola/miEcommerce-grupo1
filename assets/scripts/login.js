@@ -1,8 +1,12 @@
 window.addEventListener('load', () => {
+    let formulario = document.querySelector('.formulario');
     let inputUsuario = document.getElementById('user');
     let inputContrasenia = document.getElementById('password');
+    let inputCheck = document.getElementById("mantenerUsuario");
     let buttonIniciarSesion = document.getElementById('buttonIniciarSesion');
-    const validacionEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/ 
+    const validacionEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+
+    mantenerInputUsuario();
         
     function emailCompleto(mail) {
     if (validacionEmail.test(mail)){
@@ -45,4 +49,19 @@ window.addEventListener('load', () => {
             spanContrasenia.classList.add('errorVal')
         }
     })
+
+    formulario.addEventListener('submit', () => {
+        if(inputCheck.checked){
+            localStorage.setItem('mantenerUsuario', inputUsuario.value);
+        }else{
+            localStorage.removeItem('mantenerUsuario');
+        }
+    })
+
+    function mantenerInputUsuario(){
+        let userValue = localStorage.getItem('mantenerUsuario');   
+        if(userValue){
+            inputUsuario.value = userValue;
+        }
+    }
 })

@@ -154,3 +154,7 @@
     background-color: #000000;
     border-bottom: rgba(0, 0, 0, 50%) solid 1px;
 }
+
+.dark-mode .alertError{
+   background-color: #222222;
+}

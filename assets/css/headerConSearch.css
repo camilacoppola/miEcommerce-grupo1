@@ -10,13 +10,21 @@
 #lupaSearchBar{
     position: absolute;
     right: 1rem;
-    background-color: var(--colorBlanco);
+    background-color: transparent;
+    padding: 4px;
+    border-radius: 50%;
+    margin: 0 auto;
+}
+
+#lupaSearchBar:hover{
+    background-color: lightgray;
 }
 
 #lupaSearchBar img{
     width: 16px;
     height: auto;
     color: var(--colorGris);
+    display: block;
 }
 
 #formSearchBar{
