@@ -9,8 +9,10 @@ const mainRender = async (req,res) => {
     mostWantedProducts = await mostWantedProducts.json();
 
     let loggeado = req.app.get('user');
+
     console.log(loggeado);
     res.render('index', {sesionLogeada: loggeado, suggestedProducts: suggestedProducts.slice(0, 4), mostWantedProducts: mostWantedProducts.slice(0, 8)});
+    req.app.set('user',false);
 }
 
 module.exports = {

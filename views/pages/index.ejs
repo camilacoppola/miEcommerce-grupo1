@@ -6,12 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/index.css">
     <title>Home</title>
-    <% if (sesionLogeada) { %>
+    <% if (sesionLogeada !== undefined) { %>
         <script> localStorage.setItem("logged", true); </script>
     <% } %>
     <script src="/scripts/fakeSession.js"></script>
 </head>
-<body>
+<body class="bodyIndex">
     <%- include('../partials/header_con_search') %>
     <main class>
     <%- include('../partials/barra_navegacion')%>
@@ -49,7 +49,7 @@
             <article class="cardProducto">
                 <img src=<%= element.image %> alt=<%=element.title%>>
                 <div>
-                    <a href=<%= `/product/${element._id}` %>> <h3 class ="Descripcion"><%= element.title %></h3></a>
+                    <a id="descripcion" href=<%= `/product/${element._id}` %>> <h3 id="descripcion" class="Descripcion"><%= element.title %></h3></a>
                     <div>
                         <p><%= element.price %></p>
                         <span>Puntos</span>
@@ -69,7 +69,7 @@
                 <article class="cardProducto">
                     <img src=<%= element.image %> alt=<%=element.title%>>
                     <div>
-                        <a href=<%= `/product/${element._id}` %>> <h3 class ="Descripcion"><%= element.title %></h3></a>
+                        <a id="descripcion" href=<%= `/product/${element._id}` %>> <h3 id="descripcion" class="Descripcion"><%= element.title %></h3></a>
                         <div>
                             <p><%= element.price %></p>
                             <span>Puntos</span>

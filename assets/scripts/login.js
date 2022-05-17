@@ -23,10 +23,13 @@ window.addEventListener('load', () => {
     inputUsuario.addEventListener('input', () => {
         inputUsuario.value = inputUsuario.value.trim();
         if(emailCompleto(inputUsuario.value)){
-            buttonIniciarSesion.removeAttribute('disabled')
+            if(passwordCompleta(inputContrasenia.value)) {
+                buttonIniciarSesion.removeAttribute('disabled')
+            }
             spanUsuario.innerHTML=``
             spanUsuario.classList.remove('errorVal')
         }else{
+            buttonIniciarSesion.setAttribute('disabled',true);
             spanUsuario.innerHTML=`Email Incorrecto`
             spanUsuario.classList.add('errorVal')
         }
@@ -35,10 +38,13 @@ window.addEventListener('load', () => {
     inputContrasenia.addEventListener('input', () => {
         inputContrasenia.value = inputContrasenia.value.trim();
         if(passwordCompleta(inputContrasenia.value)){
-            buttonIniciarSesion.removeAttribute('disabled')
+            if(emailCompleto(inputUsuario.value)){
+                buttonIniciarSesion.removeAttribute('disabled')
+            }
             spanContrasenia.innerHTML=``
             spanContrasenia.classList.remove('errorVal')
         }else{
+            buttonIniciarSesion.setAttribute('disabled',true);
             spanContrasenia.innerHTML=`La longitud de la password debe ser minimo de 8 caracteres`
             spanContrasenia.classList.add('errorVal')
         }

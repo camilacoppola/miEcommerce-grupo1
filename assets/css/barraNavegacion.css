@@ -46,10 +46,42 @@
  }
 
  .navInferior .botonera p{
-    color: var(--colorBlanco);
+    color: var(--colorBlancoNav);
  }
 
  .botonera > a > img{
     border-radius: 0.5rem;
  }
 
+
+
+ @media screen and (max-width:1024px) {
+   .navInferior {
+      width: 100%;
+   }
+   .navInferior > ul {
+      flex-direction: column;
+      align-items: flex-start;
+   }
+   .navInferior .botonera {
+      border: none;
+      flex-direction: row;
+      align-items: center;
+      justify-content: flex-start;
+      margin-left: 20px;
+      /*width: initial;*/
+      width: 128px;
+      height: 30px;
+      margin-bottom: 5px;
+   }
+   .navInferior > ul li:nth-child(1) {
+      margin-top: 15px;
+   }
+   .navInferior .botonera p {
+      margin-left: 10px;
+      height: 30px;
+   }
+   .botonera .container-icon img {
+      width: 20px;
+   }
+ }

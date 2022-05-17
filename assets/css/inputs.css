@@ -5,7 +5,7 @@
     border: solid var(--colorGrisOscuro) 1px;
     padding: 8px 16px;
     color: var(--colorNegro);
-    background: var(--colorBlanco);
+    background: var(--colorBlancoBuscador);
 }
 
 .input:focus{

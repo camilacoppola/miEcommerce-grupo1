@@ -1,5 +1,5 @@
 .card {
-    background: var(--colorBlanco);
+    background: var(--colorBlancoTarjetas);
     width: 320px;
     color:  var(--colorNegro);
     padding: 8px;
@@ -8,3 +8,4 @@
     display: flex;
     justify-content: center;
 }
+

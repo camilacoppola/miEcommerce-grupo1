@@ -1,15 +1,7 @@
 
-document.addEventListener('DOMContentLoaded', () => {
-    let encuentra = localStorage.getItem("logged");
 
-    if(encuentra === null || encuentra === false){
+    let encuentra = localStorage.getItem("logged");
+    console.log("encuentrA: ", encuentra);
+    if(encuentra == "false" || encuentra === undefined || encuentra === null){
             location.replace("/users/login");
     }
-
-    // document.querySelector(".botonDesloggear").addEventListener('click', () => {
-    //     if(encuentra){
-    //         localStorage.removeItem("logged");
-    //         location.replace("/users/login");
-    //     }
-    // })
-});

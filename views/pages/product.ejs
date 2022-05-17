@@ -9,13 +9,13 @@
     <script src="/scripts/fakeSession.js"></script>
     <script src="/scripts/product.js"></script>
   </head>
-  <body>
+  <body  class="bodyProduct">
     <%- include("../partials/header_con_search") %>
     <main>
       <section class="navegacion">
         <div>
           <p>
-            <a href="/"><img src="/img/arrow-left.svg" alt="Icono flecha" /></a>
+            <a href="/"><img id="flechaIzquierda" src="/img/arrow-left.svg" alt="Icono flecha" /></a>
             Volver al listado
             <img src="/img/flecha.svg" alt="flecha categorias" />
             Alimentos
@@ -52,14 +52,14 @@
       </section>
       <section class="tarjetaProductos">
         <div>
-          <h2>También te puede interesar</h2>
+          <h2 class="titulo_seccion">También te puede interesar</h2>
         </div>
         <div class="productosCards">
           <% suggestedProducts.forEach(element => { %>
             <article class="cardProducto">
                 <img src=<%= element.image %> alt=<%=element.title%>>
                 <div>
-                    <a href=<%= `/product/${element._id}` %>> <h3 class ="Descripcion"><%= element.title %></h3></a>
+                    <a id="descripcion" href=<%= `/product/${element._id}` %>> <h3 class ="Descripcion"><%= element.title %></h3></a>
                     <div>
                         <p><%= element.price %></p>
                         <span>Puntos</span>

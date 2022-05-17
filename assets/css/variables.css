@@ -6,4 +6,18 @@
     --colorNegro: #000000;
     --colorRojo: #ff0000;
     --colorNegroClaro: rgba(51, 51, 51, 1);
+    --colorBlancoTarjetas: #ffffff;
+    --colorBlancoNav:  #ffffff;
+    --colorNegroPuntos: #000000;
+    --colorGrisCarrito: #494f51;
+    --colorBlancoUsuario:#ffffff;
+    --colorGrisIconos: #999999;
+    --colorTitulo: #000000;
+    --colorGrisOscuroLetras:#494f51;
+    --colorBlancoHeader: #ffffff;
+    --colorBlancoBuscador:#ffffff;
+}
+
+body {
+    overflow-x: hidden;
 }
