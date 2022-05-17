@@ -17,3 +17,7 @@
     --colorBlancoHeader: #ffffff;
     --colorBlancoBuscador:#ffffff;
 }
+
+body {
+    overflow-x: hidden;
+}

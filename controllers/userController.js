@@ -4,6 +4,7 @@ const path = require ('path');
 
 const loginValidacion = async (req,res) => {
     const errors = validationResult(req)
+    console.log(errors);
     if(!errors.isEmpty()){
         return res.render("login",{errors:errors.mapped()}) //error indicando el porque,
     }
