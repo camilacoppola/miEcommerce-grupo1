@@ -27,7 +27,7 @@ function crearAlerta(elemento, titulo, cuerpo, boton){
             let positionX = window.scrollX;
             let positionY = window.scrollY;
 
-            window.addEventListener('scroll', prevenirScroll)
+            window.addEventListener('scroll', prevenirScroll(positionX,positionY))
 
             mensajeError.querySelector('#buttonAlert').addEventListener('click', ()=>{
                 body.removeChild(filtroNegro);
@@ -49,7 +49,7 @@ function crearAlerta(elemento, titulo, cuerpo, boton){
         let positionX = window.scrollX;
         let positionY = window.scrollY;
 
-        window.addEventListener('scroll', prevenirScroll)
+        window.addEventListener('scroll', prevenirScroll(positionX,positionY))
 
         mensajeError.querySelector('#buttonAlert').addEventListener('click', ()=>{
             body.removeChild(filtroNegro);
@@ -60,12 +60,13 @@ function crearAlerta(elemento, titulo, cuerpo, boton){
 
 }
 
-function prevenirScroll(evento){
+function prevenirScroll(e,positionX,positionY){
     /*
     Propósito: Evita el scroll en la página.
     Parámetros:
         - **evento** será el evento del scroll con el cual se invocará la función.
     */
+
     e.preventDefault();
     window.scrollTo(positionX, positionY);
 }
