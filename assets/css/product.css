@@ -84,15 +84,16 @@ main {
   display: flex;
   background-color: var(--colorBlancoTarjetas);
   padding: 8px;
+  gap: 8px;
 }
 
-.articleCard div {
+/*articleCard div {
   margin-right: 8px;
-}
+}*/
 
-.articleCard figure {
+/*.articleCard figure {
   margin-right: 8px;
-}
+}*/
 
 .imagen_seleccionada{
   box-shadow: 0px 0px 2px 3px #00000040;
@@ -126,7 +127,13 @@ main {
 .imagenPrincipal img {
   width: 100%;
   border-radius: 8px;
-  object-fit: cover;
+  object-fit: contain;
+  aspect-ratio: 1/1;
+}
+
+.imagenPrincipal {
+  background-color: white;
+  border-radius: 16px;
 }
 
 .descripcion{
@@ -232,7 +239,7 @@ main {
   }
 
   .descripcion{
-    width: 30%;
+    width: 30%
   }
 
   .imagenPrincipal img{
@@ -241,9 +248,11 @@ main {
   }
 
   .imagenPrincipal{
+    border-radius: 16px;
+    background-color: white;
     width: 100%;
     align-content: stretch;
-    aspect-ratio: 1 / 1;
+    /*aspect-ratio: 1 / 1;*/
   }
 
   .imagenesChicas{
@@ -256,7 +265,30 @@ main {
     flex-direction: row;
   }
 }
+
+@media screen and (max-width:1024px) {
+  .descripcion {
+    order: 2;
+  }
+  .imagenesChicas {
+    order: 1;
+  }
+}
+
 @media screen and (max-width:720px) {
+  .imagenesChicas {
+    order: 1;
+  }
+  .imagenPrincipal img {
+    aspect-ratio: 1/1;
+  }
+  .imagenPrincipal {
+    border-radius: 16px;
+    background-color: white;
+  }
+  .descripcion {
+    order: 2;
+  }
   .productosCards{
     flex-direction: column;
   }

@@ -34,14 +34,15 @@
     flex-grow: 3;
 }
 
-#header_con_search > *:not(:last-child){
-    margin-right: 3.5rem;
-}
+/*#header_con_search > *:not(:last-child){
+    
+}*/
 
 #header_con_search{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
+    gap: 10%;
 }
 
 #header_con_search input{
