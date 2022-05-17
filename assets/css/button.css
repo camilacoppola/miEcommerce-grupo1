@@ -35,7 +35,7 @@
 }
 
 .buttonGrisAVerde:hover{
-    background-color: var(--colorVerde);
+    background-color: var(--colorVerde) !important;
 }
 
 .buttonGrisAVerde:hover, .buttonGris:hover, .buttonGris:hover{
@@ -53,6 +53,6 @@
 }
 
 .buttonGrisAVerdeClickeado{
-    background-color: var(--colorVerde);
+    background-color: var(--colorVerde) !important;
 }
 

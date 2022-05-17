@@ -1,3 +1,5 @@
+@import url('button.css');
+
 /*Estilos header con search*/
 .header{
     min-height: 10vh;
@@ -33,10 +35,6 @@
     align-items: center;
     flex-grow: 3;
 }
-
-/*#header_con_search > *:not(:last-child){
-    
-}*/
 
 #header_con_search{
     display: flex;
@@ -160,6 +158,10 @@
 .botonDesloggearVisible{
     display: flex;
     flex-direction: column; 
+}
+
+.botonDesloggearClickeado{
+    background-color: var(--colorVerde);
 }
 
 @media screen and (max-width: 720px) {

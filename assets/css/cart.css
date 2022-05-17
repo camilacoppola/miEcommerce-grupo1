@@ -148,6 +148,8 @@ main{
     object-position: center;
     margin-right: 1rem;
     border-radius: 1rem;
+    background-color: white;
+    border-radius: 16px;
 }
 
 #linkVolverAtras{
