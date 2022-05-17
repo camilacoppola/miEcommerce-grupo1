@@ -11,7 +11,18 @@ function crearAlerta(elemento, titulo, cuerpo, boton){
     */
 
     if(elemento !== null && elemento !== undefined){
-        buttonPagar.addEventListener('click', (e) => {
+        elemento.addEventListener('click', (e) => {
+
+            function prevenirScroll(e){
+                /*
+                Propósito: Evita el scroll en la página.
+                Parámetros:
+                    - **evento** será el evento del scroll con el cual se invocará la función.
+                */
+                e.preventDefault();
+                window.scrollTo(positionX, positionY);
+            }
+
             e.preventDefault();
 
             let body = document.querySelector('body');
@@ -36,6 +47,17 @@ function crearAlerta(elemento, titulo, cuerpo, boton){
             })
         })
     }else{
+
+        function prevenirScroll(e){
+            /*
+            Propósito: Evita el scroll en la página.
+            Parámetros:
+                - **evento** será el evento del scroll con el cual se invocará la función.
+            */
+            e.preventDefault();
+            window.scrollTo(positionX, positionY);
+        }
+
         let mensajeError = document.createElement('div');
         let filtroNegro = document.createElement('div');
         let body = document.querySelector('body');
@@ -67,7 +89,7 @@ function prevenirScroll(evento){
         - **evento** será el evento del scroll con el cual se invocará la función.
     */
     e.preventDefault();
-    window.scrollTo(positionX, positionY);
+    window.scrollTo(px, positionY);
 }
 
 // export {crearAlerta, prevenirScroll}
