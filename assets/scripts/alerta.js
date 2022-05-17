@@ -81,16 +81,3 @@ function crearAlerta(elemento, titulo, cuerpo, boton){
     }
 
 }
-
-function prevenirScroll(e,positionX,positionY){
-    /*
-    Propósito: Evita el scroll en la página.
-    Parámetros:
-        - **evento** será el evento del scroll con el cual se invocará la función.
-    */
-
-    e.preventDefault();
-    window.scrollTo(px, positionY);
-}
-
-// export {crearAlerta, prevenirScroll}
