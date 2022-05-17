@@ -30,7 +30,8 @@ body{
 
 #cardRegister{
     padding: 3rem 2rem;
-    width: 100%;
+    width: 33%;
+    min-width: 300px;
     margin: 3rem auto auto;
     display: inline-block;
     display: flex;
@@ -115,10 +116,11 @@ body{
 }
 
 /* Tamaño PC */
-@media screen and (min-width: 720px){
+@media screen and (max-width: 500px){
     #cardRegister{
-        width: 25%;
-        max-width: 300px;
+        width: 100%;
     }
-    
+    main{
+        padding: 1rem;
+    }
 }
