@@ -38,7 +38,7 @@ function crearAlerta(elemento, titulo, cuerpo, boton){
             let positionX = window.scrollX;
             let positionY = window.scrollY;
 
-            window.addEventListener('scroll', prevenirScroll(positionX,positionY))
+            window.addEventListener('scroll', prevenirScroll)
 
             mensajeError.querySelector('#buttonAlert').addEventListener('click', ()=>{
                 body.removeChild(filtroNegro);
@@ -71,9 +71,10 @@ function crearAlerta(elemento, titulo, cuerpo, boton){
         let positionX = window.scrollX;
         let positionY = window.scrollY;
 
-        window.addEventListener('scroll', prevenirScroll(positionX,positionY))
+        window.addEventListener('scroll', prevenirScroll)
 
-        mensajeError.querySelector('#buttonAlert').addEventListener('click', ()=>{
+        document.querySelector('#buttonAlert').addEventListener('click', ()=>{
+            console.log("funca")
             body.removeChild(filtroNegro);
             body.removeChild(mensajeError);
             window.removeEventListener('scroll', prevenirScroll)
